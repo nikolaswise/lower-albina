@@ -1,0 +1,93 @@
+// ┌────────────────┐
+// │ Header Classes │
+// └────────────────┘
+%header-tracking {
+  @include tracking($header-tracking);
+}
+.header-light {
+  @extend %header-tracking;
+  font-family: $header-family; font-weight: 300; font-style: normal;
+  b, strong {font-weight: 400;}
+}
+.header-light-italic {
+  @extend %header-tracking;
+  font-family: $header-family; font-weight: 300; font-style: italic;
+  b, strong {font-weight: 400;}
+}
+.header-face {
+  @extend %header-tracking;
+  font-family: $header-family; font-weight: 400; font-style: normal;
+  b, strong {font-weight: 600;}
+}
+.header-italic {
+  @extend %header-tracking;
+  font-family: $header-family; font-weight: 400; font-style: italic;
+  b, strong {font-weight: 600;}
+}
+.header-bold {
+  @extend %header-tracking;
+  font-family: $header-family; font-weight: 600; font-style: normal;
+  b, strong {font-weight: 600;}
+}
+.header-bold-italic {
+  @extend %header-tracking;
+  font-family: $header-family; font-weight: 600; font-style: italic;
+  b, strong {font-weight: 600;}
+}
+
+// ┌──────────────┐
+// │ Body Classes │
+// └──────────────┘
+%body-tracking {
+  @include tracking($body-tracking);
+}
+.body-face {
+  @extend %body-tracking;
+  font-family: $body-family; font-weight: 400; font-style: normal;
+  b, strong {font-weight: 700;}
+}
+
+.body-italic {
+  @extend %body-tracking;
+  font-family: $body-family; font-weight: 400; font-style: italic;
+  b, strong {font-weight: 700;}
+}
+
+.body-bold {
+  @extend %body-tracking;
+  font-family: $body-family; font-weight: 700; font-style: normal;
+  b, strong {font-weight: 700;}
+}
+
+.body-bold-italic {
+  @extend %body-tracking;
+  font-family: $body-family; font-weight: 700; font-style: normal;
+  b, strong {font-weight: 700;}
+}
+
+// ┌───────────────────┐
+// │ Secondary Classes │
+// └───────────────────┘
+%secondary-tracking {
+  @include tracking($secondary-tracking);
+}
+.secondary-face {
+ @extend %secondary-tracking;
+ font-family: $secondary-family; font-weight: 400; font-style: normal;
+ b, strong {font-weight: 700;}
+}
+.secondary-italic {
+ @extend %secondary-tracking;
+ font-family: $secondary-family; font-weight: 400; font-style: italic;
+ b, strong {font-weight: 700;}
+}
+.secondary-bold {
+ @extend %secondary-tracking;
+ font-family: $secondary-family; font-weight: 700; font-style: normal;
+ b, strong {font-weight: 700;}
+}
+.secondary-bold-italic {
+ @extend %secondary-tracking;
+ font-family: $secondary-family; font-weight: 700; font-style: italic;
+ b, strong {font-weight: 700;}
+}

@@ -1,0 +1,29 @@
+| type        | zone | name                         |
+| ----------- | ---- | ---------------------------- |
+| Residential | R5   | Residential 5000             |
+| Residential | R3   | Residential 3000             |
+| Residential | R.25 | Residential 2500             |
+| Residential | R2   | Residential 2000             |
+| Residential | R1   | Residential 1000             |
+| Residential | RX   | Central Residential          |
+| Residential | RH   | High Density Residential     |
+| Residential | IR   | Institutional Residential    |
+
+| Commercial  | CN1  | Neighborhood Commercial 1    |
+| Commercial  | CN2  | Neighborhood Commercial 2    |
+| Commercial  | CO1  | Office Commercial 1          |
+| Commercial  | CO2  | Office Commercial 2          |
+| Commercial  | CM   | Mixed Commercial/Residential |
+| Commercial  | CS   | Storefront Commercial        |
+| Commercial  | CG   | General Commercial           |
+| Commercial  | CX   | Central Commercial           |
+
+| Industrial  | IG1  | General Industrial 1         |
+| Industrial  | IG2  | General Industrial 2         |
+| Industrial  | IH   | Heavy Industrial             |
+
+| Employment  | EG1  | General Employment 1         |
+| Employment  | EG2  | General Employment 2         |
+| Employment  | EX   | Central Employment           |
+
+| Open Space  | OS   | Parks, Corridors, Etc        |

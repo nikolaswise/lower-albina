@@ -1,0 +1,17 @@
+{
+  "name": "angular-drag-and-drop",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Drag and Drop in Angular",
+  "repository": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-sass": "~0.7.3",
+    "chroma-js": "~0.5.7"
+  }
+}

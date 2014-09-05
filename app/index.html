@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Lower Albina</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css"/>
+  <!-- Dimple and D3 -->
+  <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+  <!-- <script src="http://dimplejs.org/dist/dimple.v2.1.0.min.js"></script> -->
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"></script>
+
+</head>
+<body ng-app="lowerAlbinaApp">
+<!--   <ul class="menu">
+    <li><a href="#/view1">view1</a></li>
+    <li><a href="#/view2">view2</a></li>
+  </ul> -->
+
+  <main class="container">
+    <div ng-view></div>
+  </main>
+
+
+  <script src="js/lib/angular.min.js"></script>
+  <script src="js/lib/angular-route.min.js"></script>
+  <script src="js//lib/chroma.min.js"></script>
+  <!-- <script src="js/lib/angular-dimple.js"></script> -->
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>

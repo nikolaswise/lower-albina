@@ -1,0 +1,551 @@
+[
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/03\/2014",
+    "Description":"SLABTOWN BAR SLABTOWN BAR PORTLAND OR DBT PURCHASE ON 07\/01 @ 04:57 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Bar",
+    "Amount": 30.00
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/03\/2014",
+    "Description":"ONLINE TRANSFER For Vanguard wi",
+    "Food": "false",
+    "Monthly": "false",
+    "Type": "Savings",
+    "Amount": 250.00,
+    "Balance": 760.81
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/04\/2014",
+    "Description":"BARISTA BARISTA PORTLAND OR DBT PURCHASE ON 07\/03 @ 05:02 CARD NBR: -0513",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Coffee",
+    "Amount": 4.75
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/04\/2014",
+    "Description":"THE CIRCUIT BOU THE CIRCUIT BOULDERING PORTLAND OR DBT PURCHASE ON 07\/02 @ 05:02 CARD NBR: -2554",
+    "Food": "false",
+    "Monthly": "false",
+    "Type": "Wellness",
+    "Amount": 2.00
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/04\/2014",
+    "Description":"VIA CHICAGO VIA CHICAGO PORTLAND OR DBT PURCHASE ON 07\/03 @ 20:18 CARD NBR: -0513",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Resto",
+    "Amount": 8.50,
+    "Balance": 745.56
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/05\/2014",
+    "Description":"THE KIVA GROCER THE KIVA GROCER 125 W 1 EUGENE OR DBT PURCHASE ON 07\/05 @ 19:57 CARD NBR: -0513",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 48.50,
+    "Balance": 697.06
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/06\/2014",
+    "Description":"RITE AID CORP. RITE AID CORP. EUGENE OR DBT PURCHASE ON 07\/05 @ 23:37 CARD NBR: -0513",
+    "Food": "false",
+    "Monthly": "false",
+    "Type": "Misc",
+    "Amount": 8.50
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/06\/2014",
+    "Description":"LUBE IT USA LUBE IT USA EUGENE OR DBT PURCHASE ON 07\/05 @ 04:37 CARD NBR: -2554",
+    "Food": "false",
+    "Monthly": "false",
+    "Type": "Car",
+    "Amount": 7.00
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/06\/2014",
+    "Description":"NEW SEASONS MAR 3445 N WILLIAMS PORTLAND OR POS PURCHASE ON 07\/06 @ 16:26 CARD NBR: -0513",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 101.16
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/06\/2014",
+    "Description":"MARKET OF CHOIC MARKET OF CHOICE WILLAM EUGENE OR DBT PURCHASE ON 07\/05 @ 20:43 CARD NBR: -0513",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 1.59
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/06\/2014",
+    "Description":"5TH QUADRANT 5TH QUADRANT PORTLAND OR DBT PURCHASE ON 07\/04 @ 20:43 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Bar",
+    "Amount": 4.00
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/06\/2014",
+    "Description":"KENNY AND ZUKES KENNY AND ZUKES DELI B PORTLAND OR DBT PURCHASE ON 07\/04 @ 20:43 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Resto",
+    "Amount": 51.00,
+    "Balance": 523.81
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/08\/2014",
+    "Description":"THE WAYPOST THE WAYPOST PORTLAND OR DBT PURCHASE ON 07\/06 @ 04:56 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Bar",
+    "Amount": 19.50,
+    "Balance": 504.31
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/09\/2014",
+    "Description":"NEW SEASONS MAR 3445 N WILLIAMS PORTLAND OR POS PURCHASE ON 07\/09 @ 18:14 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 26.98,
+    "Balance": 759.06
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/10\/2014",
+    "Description":"THE WAYPOST THE WAYPOST PORTLAND OR DBT PURCHASE ON 07\/08 @ 04:56 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Bar",
+    "Amount": 13.00,
+    "Balance": 746.06
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/11\/2014",
+    "Description":"SQ *LOYLY SAUNA SQ *LOYLY SAUNA PORTLAND OR DBT PURCHASE ON 07\/10 @ 05:01 CARD NBR: -0513",
+    "Food": "false",
+    "Monthly": "true",
+    "Type": "Wellness",
+    "Amount": 105.00
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/11\/2014",
+    "Description":"METROMILE INS S METROMILE INS SVC LLC 888-244-1702 CA DBT PURCHASE ON 07\/10 @ 09:51 CARD NBR: -0513",
+    "Food": "false",
+    "Monthly": "true",
+    "Type": "Car",
+    "Amount": 82.00,
+    "Balance": 559.06
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/12\/2014",
+    "Description":"NEW SEASONS MAR 3445 N WILLIAMS PORTLAND OR POS PURCHASE ON 07\/11 @ 21:01 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 5.98
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/12\/2014",
+    "Description":"COURIER COFFEE COURIER COFFEE PORTLAND OR DBT PURCHASE ON 07\/11 @ 09:41 CARD NBR: -0513",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Coffee",
+    "Amount": 10.00,
+    "Balance": 543.08
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/13\/2014",
+    "Description":"BARISTA BARISTA PORTLAND OR DBT PURCHASE ON 07\/12 @ 08:16 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Coffee",
+    "Amount": 7.00
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/13\/2014",
+    "Description":"NEW SEASONS MAR 3445 N WILLIAMS PORTLAND OR POS PURCHASE ON 07\/13 @ 14:47 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 7.98
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/13\/2014",
+    "Description":"REI 13 PORTLAND REI 13 PORTLAND PORTLAND OR DBT PURCHASE ON 07\/12 @ 20:43 CARD NBR: -2554",
+    "Food": "false",
+    "Monthly": "false",
+    "Type": "Outdoor",
+    "Amount": 627.85
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/13\/2014",
+    "Description":"QUESABROSA QUESABROSA PORTLAND OR DBT PURCHASE ON 07\/11 @ 20:43 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Resto",
+    "Amount": 16.00
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/13\/2014",
+    "Description":"LARDO LARDO PORTLAND OR DBT PURCHASE ON 07\/12 @ 20:43 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Resto",
+    "Amount": 5.00
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/13\/2014",
+    "Description":"LARDO LARDO PORTLAND OR DBT PURCHASE ON 07\/12 @ 20:43 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Resto",
+    "Amount": 15.50
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/13\/2014",
+    "Description":"SQ *EXTRACTO CO SQ *EXTRACTO COFFEE ROA PORTLAND OR DBT PURCHASE ON 07\/13 @ 20:43 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Coffee",
+    "Amount": 6.40,
+    "Balance": 207.35
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/14\/2014",
+    "Description":"OREGON ZOO OREGON ZOO PORTLAND OR DBT PURCHASE ON 07\/12 @ 04:56 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Resto",
+    "Amount": 12.60
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/14\/2014",
+    "Description":"NORDSTROM-RACK NORDSTROM-RACK #0028 PORTLAND OR DBT PURCHASE ON 07\/12 @ 04:56 CARD NBR: -2554",
+    "Food": "false",
+    "Monthly": "false",
+    "Type": "Clothing",
+    "Amount": 35.40
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/14\/2014",
+    "Description":"WHOLE FOODS MAR 1210 NW Couch St Portland OR POS PURCHASE ON 07\/14 @ 11:21 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 21.23,
+    "Balance": 138.12
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/15\/2014",
+    "Description":"ONLINE TRANSFER ATT Phone Bill",
+    "Food": "false",
+    "Monthly": "true",
+    "Type": "Phone",
+    "Amount": 42.60
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/15\/2014",
+    "Description":"5TH QUADRANT 5TH QUADRANT PORTLAND OR DBT PURCHASE ON 07\/13 @ 04:56 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Bar",
+    "Amount": 11.00
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/15\/2014",
+    "Description":"THE WAYPOST THE WAYPOST PORTLAND OR DBT PURCHASE ON 07\/13 @ 04:56 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Bar",
+    "Amount": 8.00
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/15\/2014",
+    "Description":"NEW SEASONS MAR 3445 N WILLIAMS PORTLAND OR POS PURCHASE ON 07\/15 @ 07:40 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 14.39
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/15\/2014",
+    "Description":"NEW SEASONS MAR 3445 N WILLIAMS PORTLAND OR POS PURCHASE ON 07\/15 @ 17:54 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 34.98,
+    "Balance": 147.15
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/16\/2014",
+    "Description":"SQ *THE FRESH P SQ *THE FRESH POT PORTLAND OR DBT PURCHASE ON 07\/15 @ 04:56 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Coffee",
+    "Amount": 10.75
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/16\/2014",
+    "Description":"SQ *BLUE HOUSE SQ *BLUE HOUSE GREENHOU PORTLAND OR DBT PURCHASE ON 07\/15 @ 09:46 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 25.00,
+    "Balance": 161.44
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/17\/2014",
+    "Description":"NEW SEASONS MAR 3445 N WILLIAMS PORTLAND OR POS PURCHASE ON 07\/16 @ 20:00 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 24.04
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/17\/2014",
+    "Description":"ARTBOXPRINT.COM ARTBOXPRINT.COM DENVER CO DBT PURCHASE ON 07\/15 @ 05:02 CARD NBR: -2554",
+    "Food": "false",
+    "Monthly": "false",
+    "Type": "Misc",
+    "Amount": 16.50
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/17\/2014",
+    "Description":"LARK PRESS LARK PRESS PORTLAND OR DBT PURCHASE ON 07\/15 @ 05:02 CARD NBR: -2554",
+    "Food": "false",
+    "Monthly": "false",
+    "Type": "Misc",
+    "Amount": 12.00
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/17\/2014",
+    "Description":"J CREW J CREW 800-562-0258 VA DBT PURCHASE ON 07\/17 @ 21:22 CARD NBR: -0513",
+    "Food": "false",
+    "Monthly": "false",
+    "Type": "Clothing",
+    "Amount": 104.00,
+    "Balance": 204.90
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/18\/2014",
+    "Description":"NEW SEASONS MAR 3445 N WILLIAMS PORTLAND OR POS PURCHASE ON 07\/18 @ 12:13 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 30.51,
+    "Balance": 174.39
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/19\/2014",
+    "Description":"COURIER COFFEE COURIER COFFEE PORTLAND OR DBT PURCHASE ON 07\/18 @ 09:56 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Coffee",
+    "Amount": 9.00,
+    "Balance": 165.39
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/20\/2014",
+    "Description":"NEW SEASONS MAR 3445 N WILLIAMS PORTLAND OR POS PURCHASE ON 07\/20 @ 11:02 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 7.60
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/20\/2014",
+    "Description":"FEDEXOFFICE 0 FEDEXOFFICE 00051391 PORTLAND OR DBT PURCHASE ON 07\/19 @ 20:43 CARD NBR: -2554",
+    "Food": "false",
+    "Monthly": "false",
+    "Type": "Misc",
+    "Amount": 1.32,
+    "Balance": 156.47
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/21\/2014",
+    "Description":"NEW SEASONS MAR NEW SEASONS MARKET PORTLAND OR DBT PURCHASE ON 07\/19 @ 05:02 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 1.69,
+    "Balance": 154.78
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/22\/2014",
+    "Description":"NEW SEASONS MAR 3445 N WILLIAMS PORTLAND OR POS PURCHASE ON 07\/22 @ 19:23 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 25.31,
+    "Balance": 129.47
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/24\/2014",
+    "Description":"ONPOINT COMMUNI 1720 NE 9TH AVENUE PORTLAND OR ATM WTHDRWL ON 07\/24 @ 13:57 CARD NBR: -0513",
+    "Food": "false",
+    "Monthly": "false",
+    "Type": "Outdoor",
+    "Amount": 300.00,
+    "Balance": 129.47
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/25\/2014",
+    "Description":"J CREW J CREW 800-562-0258 VA DBT PURCHASE ON 07\/25 @ 20:12 CARD NBR: -0513",
+    "Food": "false",
+    "Monthly": "false",
+    "Type": "Clothing",
+    "Amount": 122.57,
+    "Balance": 6.90
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/27\/2014",
+    "Description":"CLEAR CLEAR 888-253-2794 WA DBT PURCHASE ON 07\/27 @ 08:16 CARD NBR: -0513 RECURRING ITEM",
+    "Food": "false",
+    "Monthly": "true",
+    "Type": "Internet",
+    "Amount": 54.99,
+    "Balance": 159.67
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/28\/2014",
+    "Description":"THE WAYPOST THE WAYPOST PORTLAND OR DBT PURCHASE ON 07\/26 @ 06:21 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Resto",
+    "Amount": 3.16
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/28\/2014",
+    "Description":"THE WAYPOST THE WAYPOST PORTLAND OR DBT PURCHASE ON 07\/25 @ 06:21 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Resto",
+    "Amount": 14.00,
+    "Balance": 142.51
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/29\/2014",
+    "Description":"NEW SEASONS MAR 3445 N WILLIAMS PORTLAND OR POS PURCHASE ON 07\/29 @ 07:53 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 5.00
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/29\/2014",
+    "Description":"NEW SEASONS MAR 3445 N WILLIAMS PORTLAND OR POS PURCHASE ON 07\/29 @ 17:25 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 19.76
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/29\/2014",
+    "Description":"NEW SEASONS MAR 3445 N WILLIAMS PORTLAND OR POS PURCHASE ON 07\/29 @ 17:56 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 11.83,
+    "Balance": 105.92
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/30\/2014",
+    "Description":"NEW SEASONS MAR 3445 N WILLIAMS PORTLAND OR POS PURCHASE ON 07\/29 @ 20:44 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 21.92
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/30\/2014",
+    "Description":"SQ *BLUE HOUSE SQ *BLUE HOUSE GREENHOU PORTLAND OR DBT PURCHASE ON 07\/29 @ 04:56 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Groceries",
+    "Amount": 25.25,
+    "Balance": 58.75
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"07\/31\/2014",
+    "Description":"SQ *TWENTYSIX C SQ *TWENTYSIX CAFE PORTLAND OR DBT PURCHASE ON 07\/30 @ 23:41 CARD NBR: -0513",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Coffee",
+    "Amount": 4.00,
+    "Balance": 54.75
+  },
+  {
+    "Account": "NK+CCB",
+    "Date":"08\/01\/2014",
+    "Description":"RIVER PIG SALOO RIVER PIG SALOON PORTLAND OR DBT PURCHASE ON 07\/31 @ 20:22 CARD NBR: -2554",
+    "Food": "true",
+    "Monthly": "false",
+    "Type": "Bar",
+    "Amount": 17.50,
+    "Balance": 37.25
+  }
+]
