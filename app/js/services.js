@@ -45,10 +45,16 @@ angular.module('lowerAlbinaApp.services', [])
     }
   };
 
+  var lightBlue        = chroma([47, -2, -15], 'lab');
+  var darkBlue         = chroma([32, -2, -15], 'lab');
+  // scale = chroma.scale([lightBlue, darkBlue]).domain([0, stops], 'log').correctLightness(true);
+
   return {
     palletteService: function(colorset, stops) {
       var start = chroma(pallette[colorset].range[0], pallette[colorset].colorspace);
       var stop  = chroma(pallette[colorset].range[1], pallette[colorset].colorspace);
+
+      // var scale = chroma.scale([start, stop]).domain([0, stops], 'log').correctLightness(true);
       var scale = chroma.scale([start, stop]).domain([0, stops], 'log').correctLightness(true);
       return scale;
     },
