@@ -1,6 +1,6 @@
 angular.module('lowerAlbinaApp.controllers', [])
 
-.controller('mapController', ['$scope', 'colorService', function($scope, Color) {
+.controller('mapController', ['$scope', 'colorService', function($scope, colorService) {
   console.log('controller on');
 
   var white       = chroma([0, 0, 100], 'hsv');
@@ -27,88 +27,31 @@ angular.module('lowerAlbinaApp.controllers', [])
       };
     }
   });
-  contours.addTo(map);
+  // contours.addTo(map);
 
   var zoning = L.esri.featureLayer('http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Zoning_Data/FeatureServer/3', {
     style: function (feature) {
-
-      // var fill;
       var targetField = feature.properties.ZONE;
       var targetVals  = ['R5','R3','R2.5','R2','R1' ,'RX','RH','IR'];
-      // var colorSet    = palletteService(blue);
-
-
-
-      // colorService.fill(feature, targetField, targetVals, colorSet);
-      // colorService.stroke(feature, targetField, targetVals, colorSet);
-
-      // symbolService.marker(feature, targetField, targetVals, colorSet);
-      // symbolService.line(feature, targetField, targetVals, colorSet);
-
-      // var residential = ['R5','R3','R2.5','R2','R1' ,'RX','RH','IR'];
-      // lives in colorService
-
-      for (var i = 0; i < targetVals.length; i++) {
-        fill = Color.getScale('residential', targetVals.length);
-        if (targetField == targetVals[i]) {
-          return {
-            color: fill(i),
-            weight: 0.5,
-            opacity: 0.3,
-            fillOpacity: 0.13
-          };
-        }
-      }
-
-
-      var residential = ['R5','R3','R2.5','R2','R1' ,'RX','RH','IR'];
-      for (var i = 0; i < residential.length; i++) {
-        fill = Color.getScale('residential', residential.length);
-        if (targetField == residential[i]) {
-          return {
-            color: fill(i),
-            weight: 0.5,
-            opacity: 0.3,
-            fillOpacity: 0.13
-          };
-        }
-      }
-
-      var commercial = [ 'CN1', 'CN2', 'CO1', 'CO2', 'CM', 'CS', 'CG', 'CX'];
-      for (var i = 0; i < commercial.length; i++) {
-        fill = Color.getColor('commercial', commercial.length);
-        if (targetField == commercial[i]) {
-          return {
-            color: fill,
-            weight: 0.5,
-            opacity: 0.3,
-            fillOpacity: 0.13
-          };
-        }
-      }
-
-      var industrial = ['IG1', 'EG1', 'IG2', 'EG2', 'IH', 'EX'];
-      for (var i = 0; i < industrial.length; i++) {
-        fill = Color.getColor('industrial', industrial.length);
-        if (targetField == industrial[i]) {
-          return {
-            color: fill,
-            weight: 0.5,
-            opacity: 0.3,
-            fillOpacity: 0.13
-          };
-        }
-      }
-      if (targetField == 'OS') {
-        fill = Color.getColor('open');
-        return {
-          color: fill,
-          weight: 0.5,
-          opacity: 0.3,
-          fillOpacity: 0.05
-        };
-      }
+      return colorService.fill(feature, {
+        field: feature.properties.ZONE,   // Required, field to match to
+        vals: targetVals,                 // Required, val to style
+        colorSet: 'blue',                 // Required, Colorset to use
+        strokeWeight: 0.3,                // Default: 0
+        strokeOpacity: 0.3,               // Default: 1
+        fillOpacity: 1                 // Default: 1
+      });
     }
+
+    // var residential = ['R5','R3','R2.5','R2','R1' ,'RX','RH','IR'];
+
+    //   var commercial = [ 'CN1', 'CN2', 'CO1', 'CO2', 'CM', 'CS', 'CG', 'CX'];
+
+    //   var industrial = ['IG1', 'EG1', 'IG2', 'EG2', 'IH', 'EX'];
+
+  });
+  zoning.bindPopup(function (feature) {
+    return L.Util.template(feature.properties.ZONE);
   });
   zoning.addTo(map);
 
@@ -132,7 +75,7 @@ angular.module('lowerAlbinaApp.controllers', [])
       }
     }
   });
-  streets.addTo(map);
+  // streets.addTo(map);
 
   var neighborhoods = L.esri.featureLayer('http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Portland_Neighborhoods/FeatureServer/0', {
     style: function (feature) {
@@ -150,7 +93,7 @@ angular.module('lowerAlbinaApp.controllers', [])
       }
     }
   });
-  neighborhoods.addTo(map);
+  // neighborhoods.addTo(map);
 
   var footprints = L.esri.featureLayer('http://services.arcgis.com/rOo16HdIMeOBI4Mb/ArcGIS/rest/services/Eliot%20Building%20Footprints/FeatureServer/0', {
     style: function (feature) {
@@ -161,7 +104,21 @@ angular.module('lowerAlbinaApp.controllers', [])
       };
     }
   });
-  footprints.addTo(map);
+  // footprints.addTo(map);
+
+
+  var lightRail = L.esri.featureLayer('http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Portland_Light_Rail_Lines/FeatureServer/0', {
+    style: function (feature) {
+      return {
+        color: '#968D8C',
+        weight: 2,
+        opacity: 0.4,
+        dashArray: '20,10,5,5,5,10'
+      };
+    }
+  });
+ // lightRail.addTo(map);
+
 
 
 }])
