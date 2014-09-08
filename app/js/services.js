@@ -45,17 +45,11 @@ angular.module('lowerAlbinaApp.services', [])
     }
   };
 
-  var lightBlue        = chroma([47, -2, -15], 'lab');
-  var darkBlue         = chroma([32, -2, -15], 'lab');
-  // scale = chroma.scale([lightBlue, darkBlue]).domain([0, stops], 'log').correctLightness(true);
-
   return {
     palletteService: function(colorset, stops) {
       var start = chroma(pallette[colorset].range[0], pallette[colorset].colorspace);
       var stop  = chroma(pallette[colorset].range[1], pallette[colorset].colorspace);
-
-      // var scale = chroma.scale([start, stop]).domain([0, stops], 'log').correctLightness(true);
-      var scale = chroma.scale([lightBlue, darkBlue]).domain([0, stops], 'log').correctLightness(true);
+      var scale = chroma.scale([start, stop]).domain([0, stops], 'log').correctLightness(true);
       return scale;
     },
 
@@ -77,27 +71,14 @@ angular.module('lowerAlbinaApp.services', [])
         fillOpacity  = renderer.fillOpacity;
       }
 
-      // for (var i = 0; i < vals.length; i++) {
-      //   if (field == vals[i]) {
-      //     console.log(scale(i));
-      //     return {
-      //       color: scale(i),
-      //       weight: weight,
-      //       opacity: opacity,
-      //       fillOpacity: fillOpacity,
-      //     };
-      //   }
-      // }
-
-      var residential = ['R5','R3','R2.5','R2','R1' ,'RX','RH','IR'];
-      for (var j = 0; j < residential.length; j++) {
-        fill = chroma.scale([lightBlue, darkBlue]).domain([0, residential.length], 'log').correctLightness(true);
-        if (field == residential[j]) {
+      for (var i = 0; i < vals.length; i++) {
+        if (field == vals[i]) {
+          console.log(scale(i));
           return {
-            color: fill(j),
-            weight: 0.5,
-            opacity: 0.3,
-            fillOpacity: 0.13
+            color: scale(i),
+            weight: weight,
+            opacity: opacity,
+            fillOpacity: fillOpacity,
           };
         }
       }
@@ -106,51 +87,5 @@ angular.module('lowerAlbinaApp.services', [])
     stroke: function(feature, field, val, colorset) {
 
     },
-
-
-
-
-    getColor: function(type) {
-      // var color;
-      // switch (type) {
-      //   case 'residential' :
-      //     color = lightBlue;
-      //     return color;
-      //   case 'commercial' :
-      //     color = lightOrange;
-      //     return color;
-      //   case 'industrial' :
-      //     color = darkOrange;
-      //     return color;
-      //   case 'employment' :
-      //     color = lightOrange;
-      //     return color;
-      //   case 'open' :
-      //     color = lightGreen;
-      //     return color;
-      // }
-    },
-    getScale: function(type, stops) {
-      // var scale;
-      // switch (type) {
-      //   case 'residential' :
-      //     scale = chroma.scale([lightBlue, darkBlue]).domain([0, stops], 'log').correctLightness(true);
-      //     // scale = chroma.scale([white, black]).domain([0, 9], 'log').correctLightness(true);
-      //     // console.log(scale());
-      //     return scale;
-      //   case 'commercial' :
-      //     scale = chroma.scale([lightBlue, darkBlue]).domain([0, stops], 'log').correctLightness(true);
-      //     return scale;
-      //   case 'industrial' :
-      //     scale = chroma.scale([lightGreen, darkGreen]).domain([0, stops], 'log').correctLightness(true);
-      //     return scale;
-      //   case 'employment' :
-      //     scale = chroma.scale(['lightyellow', 'navy']).domain([0, stops], 'log').correctLightness(true);
-      //     return color;
-      //   case 'open' :
-      //     color = paleYellow;
-      //     return color;
-      // }
-    }
   };
 });
