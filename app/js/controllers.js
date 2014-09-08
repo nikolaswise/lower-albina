@@ -48,25 +48,41 @@ angular.module('lowerAlbinaApp.controllers', [])
       // var residential = ['R5','R3','R2.5','R2','R1' ,'RX','RH','IR'];
       // lives in colorService
 
-      for (var i = 0; i < targetVals.length; i++) {
-        fill = Color.getScale('residential', targetVals.length);
-        if (targetField == targetVals[i]) {
-          return {
-            color: fill(i),
-            weight: 0.5,
-            opacity: 0.3,
-            fillOpacity: 0.13
-          };
-        }
-      }
+      // for (var i = 0; i < targetVals.length; i++) {
+      //   fill = Color.getScale('residential', targetVals.length);
+      //   if (targetField == targetVals[i]) {
+      //     return {
+      //       color: fill(i),
+      //       weight: 0.5,
+      //       opacity: 0.3,
+      //       fillOpacity: 0.13
+      //     };
+      //   }
+      // }
 
 
+      // var residential = ['R5','R3','R2.5','R2','R1' ,'RX','RH','IR'];
+      // for (var i = 0; i < residential.length; i++) {
+      //   fill = Color.getScale('residential', residential.length);
+      //   if (targetField == residential[i]) {
+      //     return {
+      //       color: fill(i),
+      //       weight: 0.5,
+      //       opacity: 0.3,
+      //       fillOpacity: 0.13
+      //     };
+      //   }
+      // }
+
+      var targetField = feature.properties.ZONE;
+      var lightBlue        = chroma([47, -2, -15], 'lab');
+      var darkBlue         = chroma([32, -2, -15], 'lab');
       var residential = ['R5','R3','R2.5','R2','R1' ,'RX','RH','IR'];
-      for (var i = 0; i < residential.length; i++) {
-        fill = Color.getScale('residential', residential.length);
-        if (targetField == residential[i]) {
+      for (var j = 0; j < residential.length; j++) {
+        fill = chroma.scale([lightBlue, darkBlue]).domain([0, residential.length], 'log').correctLightness(true);
+        if (targetField == residential[j]) {
           return {
-            color: fill(i),
+            color: fill(j),
             weight: 0.5,
             opacity: 0.3,
             fillOpacity: 0.13
