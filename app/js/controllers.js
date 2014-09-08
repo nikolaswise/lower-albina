@@ -39,7 +39,7 @@ angular.module('lowerAlbinaApp.controllers', [])
         colorSet: 'blue',                 // Required, Colorset to use
         strokeWeight: 0.3,                // Default: 0
         strokeOpacity: 0.3,               // Default: 1
-        fillOpacity: 1                 // Default: 1
+        fillOpacity: 0.1                 // Default: 1
       });
     }
 
