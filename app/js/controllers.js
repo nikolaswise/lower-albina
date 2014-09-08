@@ -32,21 +32,50 @@ angular.module('lowerAlbinaApp.controllers', [])
   var zoning = L.esri.featureLayer('http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Zoning_Data/FeatureServer/3', {
     style: function (feature) {
       var targetField = feature.properties.ZONE;
-      var targetVals  = ['R5','R3','R2.5','R2','R1' ,'RX','RH','IR'];
-      return colorService.fill(feature, {
-        field: feature.properties.ZONE,   // Required, field to match to
-        vals: targetVals,                 // Required, val to style
-        colorSet: 'blue',                 // Required, Colorset to use
-        strokeWeight: 0.3,                // Default: 0
-        strokeOpacity: 0.3,               // Default: 1
-        fillOpacity: 0.1                  // Default: 1
-      });
+
+
+      var residential  = ['R5','R3','R2.5','R2','R1' ,'RX','RH','IR'];
+      for (var i = 0; i < residential.length; i++) {
+        if (targetField == residential[i]) {
+          return colorService.fill(feature, {
+            field: targetField,   // Required, field to match to
+            vals: residential,                // Required, val to style
+            colorSet: 'blue',                 // Required, Colorset to use
+            strokeWeight: 0.3,                // Default: 0
+            strokeOpacity: 0.3,               // Default: 1
+            fillOpacity: 0.1                  // Default: 1
+          });
+        }
+      }
+
+      var commercial = [ 'CN1', 'CN2', 'CO1', 'CO2', 'CM', 'CS', 'CG', 'CX'];
+      for (var j = 0; j < commercial.length; j++) {
+        if (targetField == commercial[j]) {
+          return colorService.fill(feature, {
+            field: targetField,   // Required, field to match to
+            vals: commercial,                // Required, val to style
+            colorSet: 'green',                 // Required, Colorset to use
+            strokeWeight: 0.3,                // Default: 0
+            strokeOpacity: 0.3,               // Default: 1
+            fillOpacity: 0.1                  // Default: 1
+          });
+        }
+      }
+
+      var industrial = ['IG1', 'EG1', 'IG2', 'EG2', 'IH', 'EX'];
+      for (var k = 0; k < industrial.length; k++) {
+        if (targetField == industrial[k]) {
+          return colorService.fill(feature, {
+            field: targetField,               // Required, field to match to
+            vals: industrial,                 // Required, val to style
+            colorSet: 'orange',               // Required, Colorset to use
+            strokeWeight: 0.3,                // Default: 0
+            strokeOpacity: 0.3,               // Default: 1
+            fillOpacity: 0.1                  // Default: 1
+          });
+        }
+      }
     }
-
-    //   var commercial = [ 'CN1', 'CN2', 'CO1', 'CO2', 'CM', 'CS', 'CG', 'CX'];
-
-    //   var industrial = ['IG1', 'EG1', 'IG2', 'EG2', 'IH', 'EX'];
-
   });
   zoning.bindPopup(function (feature) {
     return L.Util.template(feature.properties.ZONE);
