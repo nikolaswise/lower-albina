@@ -27,53 +27,62 @@ angular.module('lowerAlbinaApp.controllers', [])
       };
     }
   });
-  // contours.addTo(map);
+  contours.addTo(map);
 
   var zoning = L.esri.featureLayer('http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Zoning_Data/FeatureServer/3', {
     style: function (feature) {
       var targetField = feature.properties.ZONE;
 
-
       var residential  = ['R5','R3','R2.5','R2','R1' ,'RX','RH','IR'];
-      for (var i = 0; i < residential.length; i++) {
-        if (targetField == residential[i]) {
-          return colorService.fill(feature, {
-            field: targetField,   // Required, field to match to
-            vals: residential,                // Required, val to style
-            colorSet: 'blue',                 // Required, Colorset to use
-            strokeWeight: 0.3,                // Default: 0
-            strokeOpacity: 0.3,               // Default: 1
-            fillOpacity: 0.1                  // Default: 1
-          });
-        }
+      var residentialStyle = colorService.fill(feature, {
+        field: targetField,               // Required, field to match to
+        vals: residential,                // Required, val to style
+        colorSet: 'blue',                 // Required, Colorset to use
+        strokeWeight: 0.3,                // Default: 0
+        strokeOpacity: 0.3,               // Default: 1
+        fillOpacity: 0.1                  // Default: 1
+      });
+      if (residentialStyle) {
+        return residentialStyle;
       }
 
       var commercial = [ 'CN1', 'CN2', 'CO1', 'CO2', 'CM', 'CS', 'CG', 'CX'];
-      for (var j = 0; j < commercial.length; j++) {
-        if (targetField == commercial[j]) {
-          return colorService.fill(feature, {
-            field: targetField,   // Required, field to match to
-            vals: commercial,                // Required, val to style
-            colorSet: 'green',                 // Required, Colorset to use
-            strokeWeight: 0.3,                // Default: 0
-            strokeOpacity: 0.3,               // Default: 1
-            fillOpacity: 0.1                  // Default: 1
-          });
-        }
+      var commercialStyle = colorService.fill(feature, {
+        field: targetField,               // Required, field to match to
+        vals: commercial,                // Required, val to style
+        colorSet: 'yellow',                 // Required, Colorset to use
+        strokeWeight: 0.3,                // Default: 0
+        strokeOpacity: 0.3,               // Default: 1
+        fillOpacity: 0.1                  // Default: 1
+      });
+      if (commercialStyle) {
+        return commercialStyle;
       }
 
       var industrial = ['IG1', 'EG1', 'IG2', 'EG2', 'IH', 'EX'];
-      for (var k = 0; k < industrial.length; k++) {
-        if (targetField == industrial[k]) {
-          return colorService.fill(feature, {
-            field: targetField,               // Required, field to match to
-            vals: industrial,                 // Required, val to style
-            colorSet: 'orange',               // Required, Colorset to use
-            strokeWeight: 0.3,                // Default: 0
-            strokeOpacity: 0.3,               // Default: 1
-            fillOpacity: 0.1                  // Default: 1
-          });
-        }
+      var industrialStyle = colorService.fill(feature, {
+        field: targetField,               // Required, field to match to
+        vals: industrial,                 // Required, val to style
+        colorSet: 'orange',               // Required, Colorset to use
+        strokeWeight: 0.3,                // Default: 0
+        strokeOpacity: 0.3,               // Default: 1
+        fillOpacity: 0.1                  // Default: 1
+      });
+      if (industrialStyle) {
+        return industrialStyle;
+      }
+
+      var openspace = ['OS'];
+      var openStyle = colorService.fill(feature, {
+        field: targetField,               // Required, field to match to
+        vals: openspace,                 // Required, val to style
+        colorSet: 'green',               // Required, Colorset to use
+        strokeWeight: 0.3,                // Default: 0
+        strokeOpacity: 0.3,               // Default: 1
+        fillOpacity: 0.1                  // Default: 1
+      });
+      if (openStyle) {
+        return openStyle;
       }
     }
   });

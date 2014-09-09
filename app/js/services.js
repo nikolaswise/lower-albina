@@ -8,7 +8,8 @@ angular.module('lowerAlbinaApp.services', [])
       "name": "yellow",
       "colorspace": "lab",
       "range": [
-        [92, 0, 31]                   // paleYellow
+        [92, 0, 31],                   // paleYellow
+        [81, 5, 30]
       ]
     },
     "orange": {
@@ -73,7 +74,6 @@ angular.module('lowerAlbinaApp.services', [])
 
       for (var i = 0; i < vals.length; i++) {
         if (field == vals[i]) {
-          console.log(scale(i));
           return {
             color: scale(i),
             weight: weight,
