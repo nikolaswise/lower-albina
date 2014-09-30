@@ -27,6 +27,7 @@ angular.module('lowerAlbinaApp.controllers', [])
       };
     }
   });
+
   contours.addTo(map);
 
   var zoning = L.esri.featureLayer('http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Zoning_Data/FeatureServer/3', {
@@ -40,7 +41,7 @@ angular.module('lowerAlbinaApp.controllers', [])
         colorSet: 'blue',                 // Required, Colorset to use
         strokeWeight: 0.3,                // Default: 0
         strokeOpacity: 0.3,               // Default: 1
-        fillOpacity: 0.1                  // Default: 1
+        fillOpacity: 0.02                  // Default: 1
       });
       if (residentialStyle) {
         return residentialStyle;
@@ -59,7 +60,7 @@ angular.module('lowerAlbinaApp.controllers', [])
         return commercialStyle;
       }
 
-      var industrial = ['IG1', 'EG1', 'IG2', 'EG2', 'IH', 'EX'];
+      var industrial = ['EX', 'IH', 'IG1', 'EG1', 'IG2', 'EG2'];
       var industrialStyle = colorService.fill(feature, {
         field: targetField,               // Required, field to match to
         vals: industrial,                 // Required, val to style
@@ -86,9 +87,6 @@ angular.module('lowerAlbinaApp.controllers', [])
       }
     }
   });
-  zoning.bindPopup(function (feature) {
-    return L.Util.template(feature.properties.ZONE);
-  });
   zoning.addTo(map);
 
   var streets = L.esri.featureLayer('http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Portland_Streets/FeatureServer/0', {
@@ -111,7 +109,7 @@ angular.module('lowerAlbinaApp.controllers', [])
       }
     }
   });
-  // streets.addTo(map);
+  streets.addTo(map);
 
   var neighborhoods = L.esri.featureLayer('http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Portland_Neighborhoods/FeatureServer/0', {
     style: function (feature) {
@@ -129,7 +127,7 @@ angular.module('lowerAlbinaApp.controllers', [])
       }
     }
   });
-  // neighborhoods.addTo(map);
+  neighborhoods.addTo(map);
 
   var footprints = L.esri.featureLayer('http://services.arcgis.com/rOo16HdIMeOBI4Mb/ArcGIS/rest/services/Eliot%20Building%20Footprints/FeatureServer/0', {
     style: function (feature) {
@@ -140,7 +138,7 @@ angular.module('lowerAlbinaApp.controllers', [])
       };
     }
   });
-  // footprints.addTo(map);
+  footprints.addTo(map);
 
 
   var lightRail = L.esri.featureLayer('http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Portland_Light_Rail_Lines/FeatureServer/0', {
@@ -153,7 +151,7 @@ angular.module('lowerAlbinaApp.controllers', [])
       };
     }
   });
- // lightRail.addTo(map);
+ lightRail.addTo(map);
 
 
 
