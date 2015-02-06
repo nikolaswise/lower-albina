@@ -1,17 +1,26 @@
 {
-  "name": "angular-drag-and-drop",
-  "private": true,
+  "name": "sound-finder",
   "version": "0.0.0",
-  "description": "Drag and Drop in Angular",
-  "repository": "https://github.com/angular/angular-seed",
-  "license": "MIT",
+  "description": "build a community around music",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "npm run compile && npm run sass",
+    "compile": "browserify -e src/js/index.js -d -t [ 6to5ify --sourceMapRelative .] -o dist/bundle.js",
+    "watch:js": "fsmonitor -d src/js/ npm run compile",
+    "sass": "node-sass -r src/sass/style.scss -o dist/",
+    "watch:sass": "node-sass -w -r src/sass/style.scss -o dist/",
+    "img": "imageoptim -d src/img/",
+    "predev": "npm run prepublish",
+    "dev": "parallelshell 'live-server' 'npm run watch:js' 'npm run watch:sass'"
+  },
+  "author": "Paul C Pederson <paul.c.pederson@gmail.com> (http://paulcpederson.com/)",
+  "license": "ISC",
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-compass": "*",
-    "grunt-contrib-connect": "*",
-    "grunt-contrib-sass": "~0.7.3",
-    "chroma-js": "~0.5.7"
+    "6to5ify": "^4.1.0",
+    "browserify": "^8.1.3",
+    "imageoptim-cli": "^1.11.4",
+    "live-server": "^0.6.3",
+    "node-sass": "^2.0.0-beta",
+    "parallelshell": "^1.0.4"
   }
 }
