@@ -9,8 +9,8 @@ var map = L.map('map', {
 import contours from './layers/contours.js';
 contours.addTo(map);
 
-import zoning from './layers/zoning.js';
-zoning.addTo(map);
+// import zoning from './layers/zoning.js';
+// zoning.addTo(map);
 
 import footprints from './layers/footprints.js';
 footprints.addTo(map);

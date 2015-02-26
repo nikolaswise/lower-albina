@@ -22,7 +22,7 @@ var styleLayer = (config) => {
 
           for (let i = 0; i < stops; i++) {
             console.log(feature.properties[field] == obj.values[i]);
-            let fill = scale(i).hex()
+            let fill = scale(i).hex();
             config.fill = fill;
             // return config;
           }
