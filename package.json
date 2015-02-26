@@ -1,7 +1,7 @@
 {
-  "name": "sound-finder",
+  "name": "lower-albina",
   "version": "0.0.0",
-  "description": "build a community around music",
+  "description": "exploratory mapping project",
   "main": "index.js",
   "scripts": {
     "prepublish": "npm run compile && npm run sass",
@@ -13,14 +13,16 @@
     "predev": "npm run prepublish",
     "dev": "parallelshell 'live-server' 'npm run watch:js' 'npm run watch:sass'"
   },
-  "author": "Paul C Pederson <paul.c.pederson@gmail.com> (http://paulcpederson.com/)",
+  "author": "Nikolas Wise <hello@nikolas.io> (http://nikolas.io/)",
   "license": "ISC",
   "devDependencies": {
+    "fsmonitor":"^0.2.4",
     "6to5ify": "^4.1.0",
     "browserify": "^8.1.3",
     "imageoptim-cli": "^1.11.4",
     "live-server": "^0.6.3",
     "node-sass": "^2.0.0-beta",
+    "chroma-js": "^0.6.3",
     "parallelshell": "^1.0.4"
   }
 }

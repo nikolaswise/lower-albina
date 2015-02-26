@@ -1,11 +1,17 @@
-import http from './http.js';
-import SC from './sound-cloud.js';
+// Build the map
+var map = L.map('map', {
+  scrollWheelZoom: false,
+  doubleClickZoom: false,
+  zoomControl: false
+}).setView([45.537, -122.672], 16);
 
-var sc = SC('739b39925c3cc275aeb03837ff27762c');
+// Map layers
+import contours from './layers/contours.js';
+contours.addTo(map);
 
-sc.userID('paulcpederson').then(
-  (value) => {
-    sc.favorites(value.id).then( thing => console.log(thing) )
-  },
-  (reason) => { console.error('Something went wrong', reason); }
-);
+import zoning from './layers/zoning.js';
+zoning.addTo(map);
+
+import footprints from './layers/footprints.js';
+footprints.addTo(map);
+
