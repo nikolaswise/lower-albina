@@ -6,7 +6,11 @@ class Color {
   };
 
   getValue(param) {
-    return this.palette[param];
+    return this.palette[param].hex();
+  };
+
+  getRamp(from, to, across) {
+    return 'hey';
   };
 }
 

@@ -1,4 +1,5 @@
 import addLayer from '../add-layer.js';
+import color from '../index.js';
 
 var url = 'http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Zoning_Data/FeatureServer/3';
 
@@ -23,14 +24,18 @@ var types = {
   }
 };
 
+var featurePlacement = (category, feature) => {
+  return types[category].values.indexOf(feature.properties[field]) ;
+};
+
 var style = {
   stroke: true,
-  color: '#FAFAFA',
+  color: color.getValue('white'),
   weight: 1,
   opacity: 0.5,
   fill: true,
-  fillColor: '#FAFAFA',
-  fillOpacity: 0.66,
+  fillColor: color.getValue('white'),
+  fillOpacity: 0.1,
   dashArray: null,
   lineCap: null,
   lineJoin: null,
@@ -40,14 +45,15 @@ var style = {
 };
 
 var render = (feature) => {
-  if (types.residential.values.indexOf(feature.properties[field]) > -1) {
-    style.fillColor ='#F2E6E0';
+  if (featurePlacement('residential', feature) > -1) {
+    style.fillColor = color.getValue('lightBlue');
     return style;
-  } else if (types.commercial.values.indexOf(feature.properties[field]) > -1) {
-    style.fillColor ='#FEF4E7';
+  } else if (featurePlacement('commercial', feature) > -1) {
+    style.fillColor = color.getValue('paleYellow');
     return style;
-  } else if (types.industrial.values.indexOf(feature.properties[field]) > -1) {
-    style.fillColor ='#E5E8EB';
+  } else if (featurePlacement('industrial', feature) > -1) {
+    style.fillColor = color.getValue('lightOrange');
+    console.log(featurePlacement('industrial', feature));
     return style;
   } else {
     return style;
