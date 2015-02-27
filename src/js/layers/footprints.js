@@ -4,7 +4,8 @@ var url = 'http://services.arcgis.com/rOo16HdIMeOBI4Mb/ArcGIS/rest/services/Elio
 
 var render = function (feature) {
   return {
-    color: '#ffffff',
+    color: '#FAFAFA',
+    // color: '#AFC5CD',
     stroke: 0,
     fillOpacity: 1
   };
