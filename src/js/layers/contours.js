@@ -9,6 +9,5 @@ var config = {
   opacity: 0.2
 };
 
-
 export default addLayer(url, config);
 
