@@ -11,7 +11,8 @@
     "imageoptim-cli": "^1.11.4",
     "live-server": "^0.6.3",
     "node-sass": "^2.0.0-beta",
-    "parallelshell": "^1.0.4"
+    "parallelshell": "^1.0.4",
+    "esri-leaflet-renderers": "Esri/esri-leaflet-renderers.git#v0.0.1-beta.2"
   },
   "license": "ISC",
   "main": "index.js",
