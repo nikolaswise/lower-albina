@@ -1,64 +1,93 @@
 import addLayer from '../add-layer.js';
 import color from '../index.js';
+import Renderer from '../renderer.js';
+var objectAssign = require('object-assign');
 
 var url = 'http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Zoning_Data/FeatureServer/3';
 
 var field = 'ZONE';
 
-var types = {
-  'residential': {
-    values: ['R5','R3','R2.5','R2','R1' ,'RX','RH','IR'],
-    // ramp: [[47, -2, -15],[32, -2, -15]],
+var categories = [
+  {
+    category: 'residential',
+    values: ['R5','R3','R2.5','R2','R1' ,'RX','RH','IR']
   },
-  'commercial': {
-    values: ['CN1', 'CN2', 'CO1', 'CO2', 'CM', 'CS', 'CG', 'CX'],
-    // ramp: 'yellow',
+  {
+    category: 'commercial',
+    values: ['CN1', 'CN2', 'CO1', 'CO2', 'CM', 'CS', 'CG', 'CX']
   },
-  'industrial': {
-    values: ['IG1', 'EG1', 'IG2', 'EG2', 'IH', 'EX'],
-    // ramp: 'red',
+  {
+    category: 'industrial',
+    values: ['IG1', 'EG1', 'IG2', 'EG2', 'IH', 'EX']
   },
-  'open': {
-    values: ['OS'],
-    // ramp: 'green',
+  {
+    category: 'open',
+    values: ['OS']
   }
-};
+]
 
-var featurePlacement = (category, feature) => {
-  return types[category].values.indexOf(feature.properties[field]) ;
-};
 
-var style = {
-  stroke: true,
+var getCategory = (feature) => {
+  let featurePosition
+  categories.forEach(cat => {
+    let position = cat.values.indexOf(feature.properties[field])
+    let contains = position > -1
+    if (contains == true ) {
+      featurePosition = {
+        category: cat.category,
+        position: position,
+        within: cat.values.length
+      }
+
+    }
+  });
+  return featurePosition
+}
+
+var defaults = {
+  fillColor: color.getValue('black'),
   color: color.getValue('white'),
-  weight: 1,
-  opacity: 0.5,
-  fill: true,
-  fillColor: color.getValue('white'),
-  fillOpacity: 0.1,
-  dashArray: null,
-  lineCap: null,
-  lineJoin: null,
-  clickable: true,
-  pointerEvents: null,
-  className: ''
+  fillOpacity: 0.1
 };
 
 var render = (feature) => {
-  if (featurePlacement('residential', feature) > -1) {
-    style.fillColor = color.getValue('lightBlue');
-    return style;
-  } else if (featurePlacement('commercial', feature) > -1) {
-    style.fillColor = color.getValue('paleYellow');
-    return style;
-  } else if (featurePlacement('industrial', feature) > -1) {
-    style.fillColor = color.getValue('lightOrange');
-    console.log(featurePlacement('industrial', feature));
-    return style;
+  let fObj = getCategory(feature)
+
+  if (fObj && fObj.category) {} else { console.log(feature); }
+
+  if (fObj.category == 'residential') {
+    let styles = objectAssign({}, defaults);
+    objectAssign(styles, {
+      fillColor: color.getRamp('lightBlue', 'darkBlue', fObj.position, fObj.within)
+    })
+    return Renderer(styles);
+
+  } else if (fObj.category == 'commercial') {
+    let styles = objectAssign({}, defaults);
+    objectAssign(styles, {
+      fillColor: color.getValue('paleYellow'),
+      fillOpacity: 0.2
+    })
+    return Renderer(styles);
+
+  } else if (fObj.category == 'industrial') {
+    let styles = objectAssign({}, defaults);
+    objectAssign(styles, {
+      fillColor: color.getRamp('lightOrange', 'darkOrange', fObj.position, fObj.within),
+    })
+    return Renderer(styles);
+
+  } else if (fObj.category == 'open') {
+    let styles = objectAssign({}, defaults);
+    objectAssign(styles, {
+      fillColor: color.getValue('lightGreen'),
+      fillOpacity: 0.2
+    })
+    return Renderer(styles);
+
   } else {
-    return style;
+    return Renderer(defaults);
   }
 };
-
 
 export default addLayer(url, render);

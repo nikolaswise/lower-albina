@@ -6,7 +6,7 @@ var url = 'http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Cont
 var config = {
   color: color.getValue('black'),
   weight: 1,
-  opacity: 0.2
+  opacity: 0.1
 };
 
 export default addLayer(url, config);
