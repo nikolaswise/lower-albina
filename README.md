@@ -1,6 +1,6 @@
-# Sound Finder
+# Lower Albina
 
-Find your kindred music spirits.
+exploratory mapping project
 
 ## Install
 `npm install`

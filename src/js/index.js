@@ -23,7 +23,6 @@ var colorConfig = {
 };
 
 var color = new Color(colorConfig);
-// console.log(color)
 export default color;
 
 // Map layers
