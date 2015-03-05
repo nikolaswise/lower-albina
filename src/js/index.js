@@ -4,8 +4,11 @@ var chroma = require( "chroma-js" );
 var map = L.map('map', {
   scrollWheelZoom: false,
   doubleClickZoom: false,
-  zoomControl: false
-}).setView([45.539, -122.671], 16);
+  zoomControl: false,
+  center: [45.539, -122.671],
+  zoom: 10,
+
+})
 
 // Map Palette
 import Color from './color.js';
@@ -30,10 +33,24 @@ import contours from './layers/contours.js';
 contours.addTo(map);
 
 import zoning from './layers/zoning.js';
-zoning.bindPopup(function(features){
-  return "Zone: " + features.properties.ZONE;
-});
 zoning.addTo(map);
+
+import river from './layers/river.js';
+river.addTo(map);
+
+import streets from './layers/streets.js';
+streets.addTo(map);
 
 import footprints from './layers/footprints.js';
 footprints.addTo(map);
+
+
+
+
+// L.control.layers(contours, zoning, streets, footprints).addTo(map);
+
+// L.control.scale().addTo(map);
+
+// LAYER.bindPopup(function(features){
+//   return "FIELD: " + features.properties.FIELD;
+// });
