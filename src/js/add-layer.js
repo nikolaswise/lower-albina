@@ -1,9 +1,6 @@
 import styleLayer from './style-layer.js';
 
 var addLayer = (url, render) => {
-
-  console.log(render);
-
   if (render) {
     let layer = L.esri.featureLayer(url, {
       style : render

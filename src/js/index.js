@@ -1,4 +1,7 @@
-var chroma = require( "chroma-js" );
+var chroma = require( "chroma-js" )
+var VectorTile = require('vector-tile').VectorTile;
+
+console.log(VectorTile)
 
 // Build the map
 var map = L.map('map', {
@@ -6,7 +9,7 @@ var map = L.map('map', {
   doubleClickZoom: false,
   zoomControl: false,
   center: [45.539, -122.671],
-  zoom: 10,
+  zoom: 16,
 
 })
 
@@ -25,32 +28,24 @@ var colorConfig = {
   black:       chroma([0, 0, 0],   'hsl')
 };
 
-var color = new Color(colorConfig);
-export default color;
+var color = new Color(colorConfig)
+export default color
 
 // Map layers
-import contours from './layers/contours.js';
-contours.addTo(map);
 
-import zoning from './layers/zoning.js';
-zoning.addTo(map);
+L.tileLayer('https://{s}.tiles.mapbox.com/v4/nikolaswise.65959181/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoibmlrb2xhc3dpc2UiLCJhIjoieVJJcE1QUSJ9.f8co32wYW_YTeh_KM6PGLA#15').addTo(map);
 
-import river from './layers/river.js';
-river.addTo(map);
+// import Zoning from './layers/zoning.js';
+// Zoning.addTo(map);
 
-import streets from './layers/streets.js';
-streets.addTo(map);
+// import River from './layers/river.js';
+// import Streets from './layers/streets.js';
+// var overlay = L.layerGroup([River, Streets])
+// overplay.addTo(ma)
 
-import footprints from './layers/footprints.js';
-footprints.addTo(map);
+// import Footprints from './layers/footprints.js';
+// var footprints = L.layerGroup(Footprints)
 
+// var webmap = L.layerGroup([zoning, footprints])
 
-
-
-// L.control.layers(contours, zoning, streets, footprints).addTo(map);
-
-// L.control.scale().addTo(map);
-
-// LAYER.bindPopup(function(features){
-//   return "FIELD: " + features.properties.FIELD;
-// });
+// webmap.addTo(map);
