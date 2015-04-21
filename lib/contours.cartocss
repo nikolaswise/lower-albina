@@ -1,0 +1,58 @@
+// Languages: name (local), name_en, name_fr, name_es, name_de
+@name: '[name_en]';
+
+// Common Colors //
+
+// Grayscale //
+@white:        #ffffff;
+@offwhite:     #f3f3f3;
+@lightestgray: #e1e1e1;
+@lightergray:  #cacaca;
+@lightgray:    #adadad;
+@gray:         #959595;
+@darkgray:     #7a7a7a;
+@darkergray:   #666666;
+@darkestgray:  #515151;
+@black:        #333333;
+
+// Contours //
+// -------- //
+// 10 classes on natural breaks, grouping top 2 classes together at black end of specktrum.//
+
+#contours {
+  line-join: round;
+  line-color: @offwhite;
+  line-width: 0.25;
+}
+#contours[elevation > 25] {
+  line-color: @lightestgray;
+}
+#contours[elevation > 50] {
+  line-color: @lightergray;
+}
+#contours[elevation > 75] {
+  line-color: @lightgray;
+}
+#contours[elevation > 100] {
+  line-color: @gray;
+}
+#contours[elevation > 125] {
+  line-color: @darkgray;
+}
+#contours[elevation > 150] {
+  line-color: @darkergray;
+}
+#contours[elevation > 170] {
+  line-color: @darkestgray;
+}
+#contours[elevation > 195] {
+  line-color: @black;
+}
+
+#taxlots {
+  line-join: round;
+//  line-color: @darkestgray;
+  line-color: @darkestgray;
+  line-width: 0.5;
+  line-opacity: 0.5;
+}

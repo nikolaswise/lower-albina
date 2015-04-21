@@ -1,0 +1,45 @@
+@white: #fff;
+
+#streetsLatLong {
+  line-width: 2;
+  line-color: @white;
+}
+
+#streetsLatLong[struc_type = 10] {
+  line-width: 2;
+}
+
+#streetsLatLong[full_name = 'NE I5 FWY-BROADWAY RAMP'],
+#streetsLatLong[full_name = 'NE I5 FWY-BROADWAY RAMP'],
+#streetsLatLong[full_name = 'I5 FWY SB'],
+#streetsLatLong[full_name = 'N WILLIAMS AVE-I5 FWY RAMP'],
+#streetsLatLong[full_name = 'NE I5 FWY-BROADWAY RAMP'],
+#streetsLatLong[full_name = 'NE I5 FWY-BROADWAY RAMP'],
+#streetsLatLong[full_name = 'I5 FWY SB'],
+#streetsLatLong[full_name = 'I5 FWY NB'],
+#streetsLatLong[full_name = 'N WILLIAMS AVE-I5 FWY RAMP'],
+#streetsLatLong[full_name = 'NE I5 FWY-WEIDLER ST RAMP'],
+#streetsLatLong[full_name = 'NE I84 FWY-I5 FWY RAMP'],
+#streetsLatLong[full_name = 'NE I84 FWY-HOLLADAY ST RAMP'],
+#streetsLatLong[full_name = 'N KERBY AVE-I405 FWY RAMP'],
+#streetsLatLong[full_name = 'N I405 FWY-KERBY AVE RAMP'],
+#streetsLatLong[full_name = 'N I405 FWY-I5 FWY RAMP'],
+#streetsLatLong[full_name = 'N I5 FWY-I405 FWY RAMP'],
+#streetsLatLong[struc_type = 21],
+#streetsLatLong[struc_type = 23] {
+  line-width: 4;
+}
+
+#streetsLatLong[struc_type = 10],
+#streetsLatLong[full_name ='BROADWAY BRG'],
+#streetsLatLong[full_name ='N LARRABEE AVE-BROADWAY BRG RAMP'],
+#streetsLatLong[full_name ='N FLINT AVE'],
+#streetsLatLong[full_name ='N VANCOUVER AVE'],
+#streetsLatLong[full_name ='N BROADWAY'],
+#streetsLatLong[full_name ='NE WEIDLER ST'],
+#streetsLatLong[full_name ='N TILLAMOOK ST'],
+#streetsLatLong[full_name = 'NW LOVEJOY ST'],
+#streetsLatLong[full_name = 'NW BROADWAY'],
+#streetsLatLong[full_name ='STEEL BRG'] {
+  line-width: 2;
+}
