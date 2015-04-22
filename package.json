@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "author": "Nikolas Wise <hello@nikolas.io> (http://nikolas.io/)",
   "devDependencies": {
+    "hapi": "~8.2.0",
     "babelify": "^6.0.2",
     "browserify": "^8.1.3",
     "chroma-js": "^0.6.3",
