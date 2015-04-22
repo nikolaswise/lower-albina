@@ -62,6 +62,9 @@ This is complicated. There are a lot of good stuff out there. To get at them all
 - AGO doesn't support sub-pixel rendering
 - AGO raster tiles look a little rough.
 - MBS wont let go of tiles, either in vector or raster.
+- MBS is CRAZY EXPENSIVE FOR TILES
+- CartoDB has all styling trubs as MBS, but is cheaper.
+- CartoDB will only let you build a map with 4 layers and a basemap.
 
 ### Step By Step
 
