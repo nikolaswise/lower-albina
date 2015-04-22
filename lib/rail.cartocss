@@ -1,0 +1,27 @@
+// Grayscale //
+@white:        #ffffff;
+@offwhite:     #f3f3f3;
+@lightestgray: #e1e1e1;
+@lightergray:  #cacaca;
+@lightgray:    #adadad;
+@gray:         #959595;
+@darkgray:     #7a7a7a;
+@darkergray:   #666666;
+@darkestgray:  #515151;
+@black:        #333333;
+
+#lower_albina_rail_lines{
+  ::line,
+  ::hatch {
+    line-color: @darkergray;
+  }
+
+  ::line {
+    line-width: 1;
+  }
+
+  ::hatch {
+    line-width: 6;
+    line-dasharray: 1, 18;
+  }
+}

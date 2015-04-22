@@ -138,48 +138,91 @@ Using the Secret Dropdown Menu of Ultimate Power, view your layers item details 
 ![screenshots__0011_screen shot 2015-04-17 at 11 19 05 am](https://cloud.githubusercontent.com/assets/1987772/7210947/f325539a-e50a-11e4-892f-f78a4d5a9c58.jpg)
 ![screenshots__0010_screen shot 2015-04-17 at 11 19 38 am](https://cloud.githubusercontent.com/assets/1987772/7210951/fb4c2ce2-e50a-11e4-9046-ee99f0bfdf5f.jpg)
 
-#### 6. Convert from Meters From Null Island to Decimal Degree Coordinates
-We're gonna use (Ogr2Ogr CLI)[http://www.gdal.org/ogr2ogr.html] for this.
-
-```
-$ogr2ogr streetsLatLong.geojson -t_srs 'WGS84' -f 'GeoJSON' Streets-Lower-Albina.geojson;
-```
-![screenshots__0009_screen shot 2015-04-17 at 11 20 38 am](https://cloud.githubusercontent.com/assets/1987772/7210952/08ddcf0a-e50b-11e4-8d0c-3d62728657d4.jpg)
-
-#### 7. Get the Data into MapBox Studio
-[Sign up for a Free Account with Mapbox](https://www.mapbox.com/signup/). Get your hands on [MapBox Studio](https://www.mapbox.com/mapbox-studio/) and start a new Source Project from Custom Vector Tiles.
-![screenshots__0008_screen shot 2015-04-17 at 12 31 42 pm](https://cloud.githubusercontent.com/assets/1987772/7210955/16000810-e50b-11e4-9ed9-94dbbc20e106.jpg)
-
-Add a new layer, and select the GeoJSON that Ogr2Ogr gave us. Save that, and upload it to MapBox.
-![screenshots__0007_screen shot 2015-04-17 at 12 32 02 pm](https://cloud.githubusercontent.com/assets/1987772/7210957/1bb0b37c-e50b-11e4-8db7-8ef604a91351.jpg)
-![screenshots__0006_screen shot 2015-04-17 at 12 33 15 pm](https://cloud.githubusercontent.com/assets/1987772/7210958/1d36f27e-e50b-11e4-9cb0-a280472163d4.jpg)
-
-Once the data uploads, go find it in MapBox. Copy the source ID, and head back to mapbox studio.
-![screenshots__0005_screen shot 2015-04-17 at 12 33 48 pm](https://cloud.githubusercontent.com/assets/1987772/7210960/22ac5140-e50b-11e4-85c3-3837103db249.jpg)
+#### 6. Get the Data into CartoDB
+Upload your GeoJSON to a [free CartoDB account](https://cartodb.com/signup).
 
 #### 8. Style Your Data in MapBox Studio
-Create a new Style Project in MapBox Studio. As your data source, plug your uploaded Source ID into the little input at the bottom and hit 'Create'.
-![screenshots__0004_screen shot 2015-04-17 at 12 34 45 pm](https://cloud.githubusercontent.com/assets/1987772/7210963/2815b068-e50b-11e4-8ca6-018dd4074053.jpg)
-![screenshots__0003_screen shot 2015-04-17 at 12 35 17 pm](https://cloud.githubusercontent.com/assets/1987772/7210964/2b75c590-e50b-11e4-9c6d-b00632c41aac.jpg)
+Add your data to a new map. Pick your data carefully though - CartoDB only allows [4 datasets per map](http://docs.cartodb.com/faqs.html#how-many-layers-can-my-visualization-have) at the free level. So that's cool!
 
-Now you can write CartoCSS in MapBox Studio to style the data. Grab your screenshot of AGO's render rules, and go to town implementing AGO Styles in CartoCSS. For the streets data set, I want to style some features in a way that the underlying data doesn't exactly reflect. MBS lets us go in and inspect feature by feature, and add a CartoCSS rule that addresses consistency at this level, which can't be done in AGO.
-![screenshots__0002_screen shot 2015-04-17 at 12 36 01 pm](https://cloud.githubusercontent.com/assets/1987772/7210967/34a9b568-e50b-11e4-9d46-1c68092b4523.jpg)
-![screenshots__0001_screen shot 2015-04-17 at 12 38 11 pm](https://cloud.githubusercontent.com/assets/1987772/7210970/36f26536-e50b-11e4-98ea-2f2bf2042887.jpg)
-![screenshots__0000_screen shot 2015-04-17 at 12 50 17 pm](https://cloud.githubusercontent.com/assets/1987772/7210972/3925a340-e50b-11e4-887e-a9a0a44a6b37.jpg)
+Now you can write CartoCSS in your CartoDB map to style the data. Grab your screenshot of AGO's render rules, and go to town implementing AGO Styles in CartoCSS. For the streets data set, I want to style some features in a way that the underlying data doesn't exactly reflect. CartoDB lets us go in and inspect feature by feature, and add a CartoCSS rule that addresses consistency at this level, which can't be done in AGO.
 
-#### 9. Upload the Style Project as MapBox Tiles
-Once your style is uploaded, you can head over to MapBox and preview the tile.
-Make sure the tile are public in the API, and grab the preview url. For my Base Layer, it looks like this:
-![screenshots__0038_screen shot 2015-04-17 at 1 10 11 pm](https://cloud.githubusercontent.com/assets/1987772/7210979/429a192e-e50b-11e4-92ca-ec2abce4f9de.jpg)
+To get rid of the basemap, upload a blank, transparent .png and set THAT as the basemap.
 
+#### 9. Use CartDB.js to get your tiles
+
+CartoDB exposes the json for your map through the 'Share' modal. Grab the endpoint un the cartodb.js option, and use cartodb to add your map to your leaflet project.
+
+Turn leaflet off and add CartoDB.js instead
+```
+<!-- Load Leaflet from CDN-->
+<!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /> -->
+<!-- <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> -->
+
+<!-- CartoDB -->
+<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.13/themes/css/cartodb.css" />
+<script src="http://libs.cartocdn.com/cartodb.js/v3/3.13/cartodb.js"></script>
+```
+
+In your main js file, add your layer to your map.
 
 ```
-https://api.tiles.mapbox.com/v4/nikolaswise.65959181/page.html?access_token=pk.eyJ1Ijoibmlrb2xhc3dpc2UiLCJhIjoieVJJcE1QUSJ9.f8co32wYW_YTeh_KM6PGLA#15/45.5356/-122.6707
+cartodb.createLayer(map, url)
+  .addTo(map)
+  .on('done', function(layer) {
+    //do stuff
+  })
+  .on('error', function(err) {
+    alert("some error occurred: " + err);
+  });
 ```
 
-#### 10. Consume in Leaflet
-Consume your tiles in your Leaflet app, and add em to your map!
+#### 10. Grab your tile endpoint from your app
+
+If cartodb added your map as a layer in your leaflet app, we're on the right track. Open your network request panel, and find a tile from your map. Copy the URL. Mine looks like this:
 
 ```
-L.tileLayer('https://{s}.tiles.mapbox.com/v4/nikolaswise.65959181/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoibmlrb2xhc3dpc2UiLCJhIjoieVJJcE1QUSJ9.f8co32wYW_YTeh_KM6PGLA#15').addTo(map);
+http://2.ashbu.cartocdn.com/nikolaswise/api/v1/map/e84ce689c5a9a5090b90c0cb4dba4c9f:1429741486907.6099/16/10435/23435.png
 ```
+
+#### 11. Convert that to Actual Tile Endpoint
+
+To consume these tiles in Regular Leaflet without CartoDB.js, you need to variablize this URL. That means adding {s}, {x}, {y}, and {z} variables. My endpoint ends up looking like this:
+
+```
+http://{s}.ashbu.cartocdn.com/nikolaswise/api/v1/map/e84ce689c5a9a5090b90c0cb4dba4c9f:1429741486907.6099/{z}/{x}/{y}.png
+```
+
+#### 12. Eat those tiles with Leaflet.
+
+Turn off CartoDB.js and turn Leaflet back on.
+
+```
+<!-- Load Leaflet from CDN-->
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+<!-- CartoDB -->
+<!-- <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.13/themes/css/cartodb.css" /> -->
+<!-- <script src="http://libs.cartocdn.com/cartodb.js/v3/3.13/cartodb.js"></script> -->
+```
+
+Use Leaflet to add a new Tile Layer with your tile endpoint url.
+
+```
+var referenceLayer = L.tileLayer('http://{s}.ashbu.cartocdn.com/nikolaswise/api/v1/map/e84ce689c5a9a5090b90c0cb4dba4c9f:1429741486907.6099/{z}/{x}/{y}.png')
+referenceLayer.addTo(map);
+```
+
+Delete all that `cartodb.createLayer()` junk. If your tile layer belongs on the bottom like a regular tile layer your done! If your crazy that me and want a tile layer to sit OVER the rest of the map, you have one more step.
+
+12. Create a new Leaflet Map Pane
+
+Build a brand new pane for leaflet, bring it to the top of the pane stack, and move your tile layer's container element to it.
+
+```
+var referencePane = map._createPane('leaflet-reference-pane', map.getPanes().mapPane);
+referencePane.appendChild(referenceLayer.getContainer());
+referenceLayer.setZIndex(9);
+```
+
+And you have a tile layer sitting on top of your map!
