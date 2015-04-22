@@ -19,3 +19,8 @@ server.route({
     }
   }
 });
+
+console.log('Serving /index.html with hapi')
+
+// Start the server
+server.start();
