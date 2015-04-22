@@ -1,5 +1,5 @@
 import addLayer from '../add-layer.js';
-import color from '../index.js';
+import color from '../color.js'
 import Renderer from '../renderer.js';
 var objectAssign = require('object-assign');
 
@@ -25,7 +25,6 @@ var categories = [
     values: ['OS']
   }
 ]
-
 
 var getCategory = (feature) => {
   let featurePosition
