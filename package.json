@@ -8,11 +8,16 @@
     "browserify": "^8.1.3",
     "chroma-js": "^0.6.3",
     "fsmonitor": "^0.2.4",
-    "imageoptim-cli": "^1.11.4",
+    "imagemin-newer": "^1.0.1",
     "live-server": "^0.6.3",
     "node-sass": "^2.0.0-beta",
     "object-assign": "~2.0.0",
-    "parallelshell": "^1.0.4"
+    "parallelshell": "^1.0.4",
+    "rerun-script": "^0.6.0",
+    "scss-cli": "0.0.5",
+    "scss-utils": "git://github.com/paulcpederson/scss-utils.git",
+    "typecabinet": "git://github.com/nikolaswise/typecabinet.git",
+    "viewport-grid": "git://github.com/esripdx/viewport-grid.git"
   },
   "dependencies": {
     "hapi": "~8.2.0"
@@ -23,15 +28,19 @@
     "type": "git",
     "url": "https://github.com/nikolaswise/lower-albina.git"
   },
+  "watches": {
+    "js": "src/js/**",
+    "sass": "src/sass/**",
+    "img": "src/img/**"
+  },
   "scripts": {
     "start": "node server.js",
     "compile": "browserify -e src/js/index.js -d -t [ babelify --sourceMapRelative .] -o dist/bundle.js",
-    "dev": "parallelshell 'live-server' 'npm run watch:js' 'npm run watch:sass'",
-    "img": "imageoptim -d src/img/",
+    "watch": "rerun-script",
+    "dev": "parallelshell 'live-server' 'rerun-script'",
+    "img": "imagemin-newer src/img/ dist",
     "predev": "npm run prepublish",
     "prepublish": "npm run compile && npm run sass",
-    "sass": "node-sass -r src/sass/style.scss -o dist/",
-    "watch:js": "fsmonitor -d src/js/ npm run compile",
-    "watch:sass": "node-sass -w -r src/sass/style.scss -o dist/"
+    "sass": "scss-cli src/sass/*.scss --include-path node_modules/ -o dist/"
   }
 }

@@ -1,0 +1,99 @@
+// Breakpoints
+$small:                    480px;
+$medium:                   860px;
+$large:                    9000px;
+
+// Grid Settings
+$vw-ratio:                 1;
+$container-width:          $vw-ratio * 100vw;
+$container-min:            0;
+$container-max:            $large * $vw-ratio;
+$column-gutter:            1rem;
+
+// Grid Fallback Options
+$ie8-support:              false;
+$column-gutter-fallback:   20px;
+$container-width-fallback: 960px;
+
+// Large
+$large-class:              'column';
+$large-column-count:       24;
+
+// Medium
+$medium-class:             'tablet';
+$medium-column-count:      12;
+
+// Small
+$small-class:              'phone';
+$small-column-count:       6;
+
+// Rhythm
+$baseline:                 1.5rem;
+$vertical-range:           6;
+$horizontal-range:         4;
+
+
+// ┌─────────────────┐
+// │ SCALE:  MUSICAL │
+// └─────────────────┘
+$octave:             2;
+$major7th:           1.875;
+$minor7th:           1.778;
+$major6th:           1.667;
+$minor6th:           1.6;
+$fifth:              1.5;
+$dim5th:             1.414;
+$aug4th:             1.414;
+$fourth:             1.33;
+$major3rd:           1.25;
+$minor3rd:           1.2;
+$major2nd:           1.125;
+$minor2nd:           1.067;
+$unison:             1;
+
+// ┌───────────────┐
+// │ SCALE:  OTHER │
+// └───────────────┘
+$golden:             1.618;
+
+// ┌────────────┐
+// │ Structural │
+// └────────────┘
+$ratio:              $golden;
+$body-size:          1rem;
+$small-size:         0.85rem;
+$baseline:           1.5rem;
+$indent:             1em;
+
+// ┌───────────────┐
+// │ Font Families │
+// └───────────────┘
+$header-family:      'Ideal Sans SSm SmallCaps A',
+                     'Ideal Sans SSm SmallCaps B',
+                     'Helvetica',
+                     'Arial',
+                     sans-serif;
+
+$header-light:       200, 300;
+$header-regular:     300, 400;
+$header-bold:        false;
+
+$body-family:        'Sentinel SSm A',
+                     'Sentinel SSm B',
+                     "Lucida Grande",
+                     "Segoe UI",
+                     "Arial",
+                     sans-serif;
+
+$body-regular:       400, 600;
+$body-bold:          600, 600;
+
+$secondary-regular:  false;
+$secondary-bold:     false;
+
+
+// ┌───────────────┐
+// │ Base Tracking │
+// └───────────────┘
+$header-tracking:    70;
+$body-tracking:      30;
