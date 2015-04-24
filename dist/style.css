@@ -1325,13 +1325,14 @@ body {
   position: absolute;
   top: 3rem;
   bottom: 3rem;
-  right: 2rem;
-  left: 2rem;
+  right: 3rem;
+  left: 3rem;
   background-color: #fafafa; }
 
 .map-frame {
-  position: absolute; }
-  .map-frame .grid-container {
-    box-sizing: border-box;
-    padding-right: 2rem;
-    padding-left: 2rem; }
+  position: absolute;
+  height: 100vh; }
+
+.frame-bottom {
+  position: absolute;
+  bottom: 0; }

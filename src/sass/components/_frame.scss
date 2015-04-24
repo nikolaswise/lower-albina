@@ -1,9 +1,9 @@
 .map-frame {
   position: absolute;
+  height: 100vh;
+}
 
-  .grid-container {
-    box-sizing: border-box;
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
+.frame-bottom {
+  position: absolute;
+  bottom: 0;
 }
