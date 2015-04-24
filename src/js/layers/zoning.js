@@ -3,7 +3,7 @@ import color from '../color.js'
 import Renderer from '../renderer.js';
 var objectAssign = require('object-assign');
 
-var url = 'http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Zoning_Data/FeatureServer/3';
+var url = 'http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Lower%20Albina%20-%20Zoning%20Data/FeatureServer/0';
 
 var field = 'ZONE';
 

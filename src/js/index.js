@@ -14,6 +14,9 @@ baseLayer.addTo(map);
 import Zoning from './layers/zoning.js'
 Zoning.addTo(map)
 
+import Overlay from './layers/zone-overlay.js'
+Overlay.addTo(map)
+
 import Footprints from './layers/footprints.js'
 Footprints.addTo(map)
 
