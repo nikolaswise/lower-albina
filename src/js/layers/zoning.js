@@ -4,7 +4,6 @@ import Renderer from '../renderer.js';
 var objectAssign = require('object-assign');
 
 var url = 'http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Lower%20Albina%20-%20Zoning%20Data/FeatureServer/0';
-
 var field = 'ZONE';
 
 var categories = [
@@ -25,7 +24,6 @@ var categories = [
     values: ['OS']
   }
 ]
-
 var getCategory = (feature) => {
   let featurePosition
   categories.forEach(cat => {
@@ -50,6 +48,7 @@ var defaults = {
 };
 
 var render = (feature) => {
+
   let fObj = getCategory(feature)
 
   if (fObj && fObj.category) {} else { console.log(feature); }

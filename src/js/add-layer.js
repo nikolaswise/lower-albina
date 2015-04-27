@@ -1,4 +1,4 @@
-import styleLayer from './style-layer.js';
+// import styleLayer from './style-layer.js';
 
 var addLayer = (url, render) => {
   if (render) {
