@@ -29,7 +29,7 @@ var render = (feature) => {
     let styles = objectAssign({}, defaults);
     objectAssign(styles, {
       fill: true,
-      fillColor: 'url("#hirozontal-stripe-4")'
+      fillColor: 'url("#horizontal-stripe-4")'
     })
     return Renderer(styles);
   } else if (fObj == 's') {
