@@ -1336,3 +1336,15 @@ body {
 .frame-bottom {
   position: absolute;
   bottom: 0; }
+
+.half-mile {
+  background-color: red;
+  height: 1rem;
+  width: 481.0193px;
+  display: inline-block; }
+
+.demi-kilometer {
+  background-color: red;
+  height: 1rem;
+  width: 298.85146px;
+  display: inline-block; }

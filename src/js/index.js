@@ -14,12 +14,15 @@ var baseLayer = L.tileLayer('http://{s}.ashbu.cartocdn.com/nikolaswise/api/v1/ma
 baseLayer.addTo(map);
 
 import Overlay from './layers/zone-overlay.js'
-Overlay.addTo(map)
+// Overlay.addTo(map)
 
 import Zoning from './layers/zoning.js'
-Zoning.addTo(map)
+// Zoning.addTo(map)
 
 import Footprints from './layers/footprints.js'
+// setTimeout(function(){
+//   Footprints.addTo(map)
+// }, 200)
 
 var referenceLayer = L.tileLayer('http://{s}.ashbu.cartocdn.com/nikolaswise/api/v1/map/1058662162db119fc8bc42aa1d3ef080:1429741486907.6099/{z}/{x}/{y}.png')
 referenceLayer.addTo(map);
@@ -32,9 +35,9 @@ map.whenReady(function() {
   events.emit('map:ready', map)
 })
 
-setTimeout(function(){
-  Footprints.addTo(map)
-}, 200)
+import getScale from './lib/scale'
+getScale(map);
+
 
 
 // cartodb.createLayer(map, 'https://nikolaswise.cartodb.com/api/v2/viz/b227929a-e848-11e4-a6e2-0e9d821ea90d/viz.json')
