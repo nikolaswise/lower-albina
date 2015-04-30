@@ -1324,7 +1324,7 @@ body {
 #map {
   position: absolute;
   top: 3rem;
-  bottom: 3rem;
+  bottom: 4rem;
   right: 3rem;
   left: 3rem;
   background-color: #fafafa; }
@@ -1337,14 +1337,72 @@ body {
   position: absolute;
   bottom: 0; }
 
-.half-mile {
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.scalebar {
   background-color: red;
   height: 1rem;
-  width: 481.0193px;
   display: inline-block; }
 
-.demi-kilometer {
-  background-color: red;
-  height: 1rem;
-  width: 298.85146px;
+.scale-unit {
+  font-size: 0.6875rem;
+  line-height: 1.5rem;
+  text-align: center;
+  padding-top: 0.5rem;
+  margin: 0; }
+
+.scale {
+  width: 100%;
   display: inline-block; }
+
+.scale-section {
+  height: 10px;
+  border-left: 1px solid black;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  float: left;
+  padding-top: 2px;
+  padding-bottom: 2px; }
+  .scale-section .scale-fill {
+    width: 100%;
+    height: 1px;
+    display: inline-block;
+    padding-top: 1px;
+    padding-bottom: 1px; }
+  .scale-section:nth-child(odd) .scale-fill {
+    border-top: 3px solid black; }
+  .scale-section:nth-child(even) .scale-fill {
+    border-bottom: 3px solid black; }
+  .scale-section:last-child {
+    border-right: 1px solid black; }
+  .scale-section.eighth {
+    width: 25%; }
+  .scale-section.half {
+    width: 50%; }
+
+.scale-labels h6 {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  margin-left: -0.5em;
+  font-size: 0.625rem;
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem; }
+  .scale-labels h6:first-of-type {
+    margin-left: -0.3em; }
+  .scale-labels h6:last-of-type {
+    margin-right: -0.66em; }
+.scale-labels .eighth {
+  width: 25%;
+  display: inline-block;
+  float: left; }
+.scale-labels .half {
+  width: 50%;
+  display: inline-block;
+  float: left; }

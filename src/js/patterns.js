@@ -1,5 +1,5 @@
-import $ from './lib/$.js'
 import events from './lib/pub-sub'
+import $ from './lib/$.js'
 
 var setPatterns = function() {
   let defs = `<defs>
