@@ -3,10 +3,13 @@ import $ from './$.js'
 import diffdom from 'diff-dom'
 
 class Scalebar extends L.control.scale {
-  constructor(map) {
+  constructor(map, fn) {
     super()
     this.map = map
+    this.fn = fn ? fn : false
+    console.log(this.fn)
   }
+
   getScale() {
     let map = this.map
     var centerLatLng = map.getCenter();                    // get map center
@@ -59,7 +62,11 @@ class Scalebar extends L.control.scale {
     return scale
   }
 
-  draw(element, template) {
+  addTo(element) {
+    console.log(`add this scale bar to the element #${element}`)
+  }
+
+  custom(element, template) {
     let render = () => {
       let scale = this.getScale()
       let tmp = hogan.compile(template);
@@ -83,10 +90,7 @@ class Scalebar extends L.control.scale {
     this.map.on('zoomend', function(){
       render()
     })
-
   }
 }
-
-console.log(Scalebar)
 
 export default Scalebar
