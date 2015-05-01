@@ -1,0 +1,72 @@
+$fill: black;
+$scale-height: 10px;
+
+.scale-unit {
+  // font-size: 0.6875rem;
+  @include font-size(-5);
+  text-align: center;
+  // padding-top: 0.5rem;
+  padding-top: $baseline/3;
+  margin: 0;
+}
+
+.scale-bars {
+  width: 100%;
+  display: inline-block;
+}
+
+.quarter-scale {
+  width: 25%;
+  display: inline-block;
+  float:left;
+}
+.half-scale {
+  width: 50%;
+  display: inline-block;
+  float:left;
+}
+
+.scale-section {
+  height: 10px;
+  border-left: 1px solid $fill;
+  padding-top: 2px;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  float: left;
+  &:last-child {
+    .scale-fill { border-right: 1px solid $fill; }
+  }
+  &:nth-child(odd) {
+    .scale-fill { border-top: 3px solid $fill; }
+  }
+  &:nth-child(even) {
+    .scale-fill { border-bottom: 3px solid $fill; }
+  }
+}
+
+.scale-fill {
+  width: 100%;
+  height: 3px;
+  display: inline-block;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.scale-labels {
+  .label {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-left: -0.5em;
+    @include font-size(-6);
+    padding-bottom: $baseline/4;
+    &:first-of-type {
+      margin-left: -0.3em;
+    }
+    &:last-of-type {
+      margin-right: -0.66em;
+    }
+  }
+}

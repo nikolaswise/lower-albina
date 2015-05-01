@@ -17,15 +17,15 @@ $container-width-fallback: 960px;
 
 // Large
 $large-class:              'column';
-$large-column-count:       24;
+$large-column-count:       13;
 
 // Medium
 $medium-class:             'tablet';
-$medium-column-count:      12;
+$medium-column-count:      7;
 
 // Small
 $small-class:              'phone';
-$small-column-count:       6;
+$small-column-count:       5;
 
 // Rhythm
 $baseline:                 1.5rem;
@@ -59,7 +59,7 @@ $golden:             1.618;
 // ┌────────────┐
 // │ Structural │
 // └────────────┘
-$ratio:              $golden;
+$ratio:              $minor7th;
 $body-size:          1rem;
 $small-size:         0.85rem;
 $baseline:           1.5rem;
