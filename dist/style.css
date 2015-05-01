@@ -97,21 +97,21 @@ body {
   font-feature-settings: "liga" 1,"calt" 0; }
 
 h1 {
-  font-size: 3.60043rem;
+  font-size: 4.77765rem;
   line-height: 3rem; }
 
 h2 {
-  font-size: 2.61792rem; }
+  font-size: 3.16128rem; }
 
 h3 {
-  font-size: 2.22524rem;
+  font-size: 2.68709rem;
   line-height: 2.25rem; }
 
 h4 {
-  font-size: 1.618rem; }
+  font-size: 1.778rem; }
 
 h5 {
-  font-size: 1.3753rem;
+  font-size: 1.5113rem;
   line-height: 1.5rem; }
 
 h6 {
@@ -129,7 +129,7 @@ blockquote {
   margin: 0; }
 
 blockquote, blockquote p {
-  font-size: 1.3753rem;
+  font-size: 1.5113rem;
   line-height: 1.5rem; }
 
 ul, ol {
@@ -212,7 +212,7 @@ pre {
       height: 100%;
       width: 0.75em;
       padding: 0 .5em 0 0;
-      font-size: 1.3753rem;
+      font-size: 1.5113rem;
       line-height: 1.5rem;
       line-height: 2.25rem;
       text-align: right; }
@@ -251,33 +251,33 @@ pre {
   line-height: 1.5rem; }
 
 .font-size-1 {
-  font-size: 1.3753rem;
+  font-size: 1.5113rem;
   line-height: 1.5rem; }
 
 .font-size-2 {
-  font-size: 1.618rem; }
+  font-size: 1.778rem; }
 
 .font-size-3 {
-  font-size: 2.22524rem;
+  font-size: 2.68709rem;
   line-height: 2.25rem; }
 
 .font-size-4 {
-  font-size: 2.61792rem; }
+  font-size: 3.16128rem; }
 
 .font-size-5 {
-  font-size: 3.60043rem;
+  font-size: 4.77765rem;
   line-height: 3rem; }
 
 .font-size-6 {
-  font-size: 4.2358rem;
+  font-size: 5.62076rem;
   line-height: 3rem; }
 
 .font-size-7 {
-  font-size: 5.8255rem;
+  font-size: 8.49466rem;
   line-height: 3rem; }
 
 .font-size-8 {
-  font-size: 6.85353rem;
+  font-size: 9.99372rem;
   line-height: 3rem; }
 
 .grid-container:before, [class*="column-"]:last-of-type:before, .grid-container:after, [class*="column-"]:last-of-type:after {
