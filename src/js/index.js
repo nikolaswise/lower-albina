@@ -43,9 +43,9 @@ let scalebar = new Scalebar(map)
 
 scalebar.addTo('scalebar-default')
 
-// scalebar.custom('scalebar-miles', imperialTemplate)
-// scalebar.custom('resolution', "1 px : {{scale.pixelTo.meters}} meters")
-// scalebar.custom('scalebar-kilometers', metricTemplate)
+scalebar.custom('scalebar-miles', imperialTemplate)
+scalebar.custom('resolution', "1 px : {{scale.pixelTo.meters}} meters")
+scalebar.custom('scalebar-kilometers', metricTemplate)
 
 // cartodb.createLayer(map, 'https://nikolaswise.cartodb.com/api/v2/viz/b227929a-e848-11e4-a6e2-0e9d821ea90d/viz.json')
 //   .addTo(map)
