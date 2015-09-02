@@ -1,13 +1,10 @@
-// import styleLayer from './style-layer.js';
 
-var addLayer = (url, render) => {
-  if (render) {
-    let layer = L.esri.featureLayer(url, {
-      style : render
-    });
-    return layer;
-  }
-  return L.esri.featureLayer(url);
+var addLayer = (url, render, pane) => {
+  return L.esri.featureLayer({
+    pane: pane,
+    url: url,
+    style : render
+  })
 }
 
-export default addLayer;
+export default addLayer

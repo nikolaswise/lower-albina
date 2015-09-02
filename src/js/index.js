@@ -14,45 +14,36 @@ map.whenReady(function() {
   events.emit('map:ready', map)
 })
 
-var baseLayer = L.tileLayer('http://{s}.ashbu.cartocdn.com/nikolaswise/api/v1/map/86e05ccc48f4eb1bc6e5b11531870916:1429636411308.12/{z}/{x}/{y}.png')
-baseLayer.addTo(map);
+// Create the Base Layers
+map.createPane('contours')
+import Contours from './layers/contours.js'
+Contours.addTo(map)
 
-// import Overlay from './layers/zone-overlay.js'
-// Overlay.addTo(map)
+map.createPane('taxlots')
 
+
+// Create the Study Layers
+map.createPane('zoning')
 import Zoning from './layers/zoning.js'
-Zoning.addTo(map)
+console.log(Zoning)
+// Zoning.addTo(map)
 
+map.createPane('footprints')
 import Footprints from './layers/footprints.js'
-setTimeout(function(){
-  Footprints.addTo(map)
-}, 200)
+// Footprints.addTo(map)
 
-var referenceLayer = L.tileLayer('http://{s}.ashbu.cartocdn.com/nikolaswise/api/v1/map/1058662162db119fc8bc42aa1d3ef080:1429741486907.6099/{z}/{x}/{y}.png')
-referenceLayer.addTo(map);
 
-var referencePane = map._createPane('leaflet-reference-pane', map.getPanes().mapPane);
-referencePane.appendChild(referenceLayer.getContainer());
-referenceLayer.setZIndex(9);
+// Create the Reference Layers
+map.createPane('streets')
+map.createPane('river')
 
+
+// Create Other Goodies
+
+// Like the Scalebar
 import Scalebar from './lib/scale'
 import imperialTemplate from './templates/imperialScale.js'
 import metricTemplate from './templates/metricScale.js'
 
 let scalebar = new Scalebar(map)
-
-scalebar.addTo('scalebar-default')
-
 scalebar.custom('scalebar-miles', imperialTemplate)
-scalebar.custom('resolution', "1 px : {{scale.pixelTo.meters}} meters")
-scalebar.custom('scalebar-kilometers', metricTemplate)
-
-// cartodb.createLayer(map, 'https://nikolaswise.cartodb.com/api/v2/viz/b227929a-e848-11e4-a6e2-0e9d821ea90d/viz.json')
-//   .addTo(map)
-//   .on('done', function(layer) {
-//     //do stuff
-//   })
-//   .on('error', function(err) {
-//     alert("some error occurred: " + err);
-//   });
-

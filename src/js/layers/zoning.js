@@ -24,6 +24,7 @@ var categories = [
     values: ['OS']
   }
 ]
+
 var getCategory = (feature) => {
   let featurePosition
   categories.forEach(cat => {
@@ -88,4 +89,4 @@ var render = (feature) => {
   }
 };
 
-export default addLayer(url, render);
+export default addLayer(url, render, 'zoning');

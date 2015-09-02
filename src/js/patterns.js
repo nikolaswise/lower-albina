@@ -16,7 +16,7 @@ var setPatterns = function() {
 
   events.on('map:ready', map => {
     setTimeout(function(){
-      let svg = $('svg')[0]
+      let svg = $('svg')
       svg.innerHTML += defs
     }, 200)
   })

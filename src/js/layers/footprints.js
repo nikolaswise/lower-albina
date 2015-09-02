@@ -11,4 +11,4 @@ var render = (feature) => {
   }
 }
 
-export default addLayer(url,render);
+export default addLayer(url, render, 'footprints');
