@@ -20,22 +20,28 @@ import Contours from './layers/contours.js'
 Contours.addTo(map)
 
 map.createPane('taxlots')
-
+import Taxlots from './layers/taxlots.js'
+Taxlots.addTo(map)
 
 // Create the Study Layers
 map.createPane('zoning')
 import Zoning from './layers/zoning.js'
 console.log(Zoning)
-// Zoning.addTo(map)
+Zoning.addTo(map)
 
 map.createPane('footprints')
 import Footprints from './layers/footprints.js'
-// Footprints.addTo(map)
+Footprints.addTo(map)
 
 
 // Create the Reference Layers
-map.createPane('streets')
 map.createPane('river')
+import River from './layers/river.js'
+River.addTo(map)
+
+map.createPane('streets')
+import Streets from './layers/streets.js'
+Streets.addTo(map)
 
 
 // Create Other Goodies

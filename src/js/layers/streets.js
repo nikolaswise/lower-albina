@@ -1,5 +1,5 @@
 import addLayer from '../add-layer.js';
-import color from '../index.js';
+import color from '../color.js';
 import Renderer from '../renderer.js';
 var objectAssign = require('object-assign');
 
@@ -49,4 +49,4 @@ var render = (feature) => {
   }
 }
 
-export default addLayer(url,render);
+export default addLayer(url,render,'streets');

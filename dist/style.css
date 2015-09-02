@@ -1322,7 +1322,7 @@ body {
   min-width: 100vw; }
 
 #map {
-  position: absolute;
+  position: fixed;
   top: 3rem;
   bottom: 4rem;
   right: 3rem;
@@ -1330,11 +1330,11 @@ body {
   background-color: #fafafa; }
 
 .map-frame {
-  position: absolute;
+  position: fixed;
   height: 100vh; }
 
 .frame-bottom {
-  position: absolute;
+  position: fixed;
   bottom: 0; }
 
 .scale-unit {
