@@ -17,8 +17,8 @@ map.whenReady(function() {
 var baseLayer = L.tileLayer('http://{s}.ashbu.cartocdn.com/nikolaswise/api/v1/map/86e05ccc48f4eb1bc6e5b11531870916:1429636411308.12/{z}/{x}/{y}.png')
 baseLayer.addTo(map);
 
-import Overlay from './layers/zone-overlay.js'
-Overlay.addTo(map)
+// import Overlay from './layers/zone-overlay.js'
+// Overlay.addTo(map)
 
 import Zoning from './layers/zoning.js'
 Zoning.addTo(map)
