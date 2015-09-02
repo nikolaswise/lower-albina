@@ -41,7 +41,7 @@
     "start": "node server.js",
     "js": "browserify -e src/js/index.js -d -t [ babelify --sourceMapRelative .] -o dist/bundle.js",
     "watch": "rerun-script",
-    "dev": "parallelshell 'live-server' 'rerun-script'",
+    "dev": "parallelshell 'node server.js' 'rerun-script'",
     "img": "imagemin-newer src/img/ dist",
     "predev": "npm run prepublish",
     "prepublish": "npm run js && npm run sass",
