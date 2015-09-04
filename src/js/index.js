@@ -17,30 +17,29 @@ map.whenReady(function() {
 // Create the Base Layers
 map.createPane('contours')
 import Contours from './layers/contours.js'
-Contours.addTo(map)
+
 
 map.createPane('taxlots')
-import Taxlots from './layers/taxlots.js'
+// import Taxlots from './layers/taxlots.js'
 // Taxlots.addTo(map)
 
 // Create the Study Layers
 map.createPane('zoning')
-import Zoning from './layers/zoning.js'
-console.log(Zoning)
+// import Zoning from './layers/zoning.js'
 // Zoning.addTo(map)
 
 map.createPane('footprints')
-import Footprints from './layers/footprints.js'
+// import Footprints from './layers/footprints.js'
 // Footprints.addTo(map)
 
 
 // Create the Reference Layers
 map.createPane('river')
-import River from './layers/river.js'
-River.addTo(map)
+// import River from './layers/river.js'
+// River.addTo(map)
 
 map.createPane('streets')
-import Streets from './layers/streets.js'
+// import Streets from './layers/streets.js'
 // Streets.addTo(map)
 
 
@@ -53,3 +52,5 @@ import metricTemplate from './templates/metricScale.js'
 
 let scalebar = new Scalebar(map)
 scalebar.custom('scalebar-miles', imperialTemplate)
+
+export default map
