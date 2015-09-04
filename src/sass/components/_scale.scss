@@ -1,11 +1,8 @@
-$fill: black;
+$fill: $black;
 $scale-height: 10px;
 
 .scale-unit {
-  // font-size: 0.6875rem;
   @include font-size(-5);
-  text-align: center;
-  // padding-top: 0.5rem;
   padding-top: $baseline/3;
   margin: 0;
 }

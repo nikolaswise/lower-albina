@@ -1,5 +1,5 @@
 let imperialTemplate = `
-  <div class="scale right" style="width:{{scale.pixelFrom.halfMile}}px">
+  <div class="scale" style="width:{{scale.pixelFrom.halfMile}}px">
     <h6 class="scale-unit">miles</h6>
     <div class="scale-bars">
       <div class="quarter-scale scale-section"><span class="scale-fill"></span></div>

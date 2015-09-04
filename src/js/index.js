@@ -4,10 +4,10 @@ import events from './lib/pub-sub'
 var map = L.map('map', {
   scrollWheelZoom: false,
   doubleClickZoom: false,
-  zoomControl: true,
+  zoomControl: false,
   dragging: false,
   center: [45.539, -122.669],
-  zoom: 16
+  zoom: 13
 })
 
 map.whenReady(function() {
@@ -21,17 +21,17 @@ Contours.addTo(map)
 
 map.createPane('taxlots')
 import Taxlots from './layers/taxlots.js'
-Taxlots.addTo(map)
+// Taxlots.addTo(map)
 
 // Create the Study Layers
 map.createPane('zoning')
 import Zoning from './layers/zoning.js'
 console.log(Zoning)
-Zoning.addTo(map)
+// Zoning.addTo(map)
 
 map.createPane('footprints')
 import Footprints from './layers/footprints.js'
-Footprints.addTo(map)
+// Footprints.addTo(map)
 
 
 // Create the Reference Layers
@@ -41,7 +41,7 @@ River.addTo(map)
 
 map.createPane('streets')
 import Streets from './layers/streets.js'
-Streets.addTo(map)
+// Streets.addTo(map)
 
 
 // Create Other Goodies
