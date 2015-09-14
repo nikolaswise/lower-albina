@@ -53,4 +53,11 @@ import metricTemplate from './templates/metricScale.js'
 let scalebar = new Scalebar(map)
 scalebar.custom('scalebar-miles', imperialTemplate)
 
+
+import scrollHandler from './scroll-handler.js'
+window.addEventListener('scroll', scrollHandler, false)
+console.log(scrollHandler)
+
+
 export default map
+

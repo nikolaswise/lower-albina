@@ -1314,6 +1314,13 @@ pre {
   display: table;
   clear: both; }
 
+a {
+  color: #F27674;
+  text-decoration: none; }
+  a:hover {
+    color: #649191;
+    text-decoration: underline; }
+
 body {
   background-color: #fafafa;
   padding: 0;
@@ -1398,6 +1405,7 @@ body {
   width: 100%; }
 
 .content-panel {
+  border: 2px solid #a3a3a3;
   margin-top: 25vh;
   margin-bottom: 75vh;
   box-sizing: border-box;

@@ -7,7 +7,6 @@ class Scalebar extends L.control.scale {
     super()
     this.map = map
     this.fn = fn ? fn : false
-    console.log(this.fn)
   }
 
   getScale() {

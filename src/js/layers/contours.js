@@ -11,10 +11,7 @@ var maxElevation = 250
 
 var scale = chroma.scale([color.palette.white, color.palette.black]).domain([minElevation, maxElevation], 'log')
 
-console.log(scale(0).hex())
-
 var render = (feature) => {
-  // console.log(feature.properties[field])
   return {
     color: scale(feature.properties[field]).hex(),
     weight: 1,
