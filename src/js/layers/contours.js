@@ -17,7 +17,5 @@ var render = (feature) => {
     opacity: 0.3
   }
 }
-console.log('contours make')
-console.log(render)
 
 export default addLayer(url, render, 'contours');

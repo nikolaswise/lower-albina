@@ -1,6 +1,4 @@
-
 var addLayer = (url, render, pane) => {
-  console.log(url, render, pane)
   return L.esri.featureLayer({
     pane: pane,
     url: url,
