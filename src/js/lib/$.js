@@ -1,5 +1,3 @@
-import polyfill from 'array.from'
-
 /**
 * Create a new array like object of dom elements
 */

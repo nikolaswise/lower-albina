@@ -1,8 +1,7 @@
-var chroma = require( "chroma-js" )
+import chroma from 'chroma-js'
 import addLayer from '../add-layer.js'
 import color from '../color.js'
 
-var data = 'pdx-contours.geojson'
 var url = 'http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Contours_5ft_pdx_(1)/FeatureServer/0';
 
 var field = 'ELEVATION'
@@ -18,5 +17,7 @@ var render = (feature) => {
     opacity: 0.3
   }
 }
+console.log('contours make')
+console.log(render)
 
-export default addLayer(data, render, 'contours');
+export default addLayer(url, render, 'contours');

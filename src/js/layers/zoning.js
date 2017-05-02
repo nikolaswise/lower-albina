@@ -1,7 +1,6 @@
 import addLayer from '../add-layer.js';
 import color from '../color.js'
 import Renderer from '../renderer.js';
-var objectAssign = require('object-assign');
 
 var url = 'http://services.arcgis.com/rOo16HdIMeOBI4Mb/arcgis/rest/services/Lower%20Albina%20-%20Zoning%20Data/FeatureServer/0';
 var field = 'ZONE';
@@ -52,33 +51,35 @@ var render = (feature) => {
 
   let fObj = getCategory(feature)
 
-  if (fObj && fObj.category) {} else { console.log(feature); }
+  if (!fObj) {
+    return Renderer(defaults);
+  }
 
   if (fObj.category == 'residential') {
-    let styles = objectAssign({}, defaults);
-    objectAssign(styles, {
+    let styles = Object.assign({}, defaults);
+    Object.assign(styles, {
       fillColor: color.getRamp('lightBlue', 'darkBlue', fObj.position, fObj.within)
     })
     return Renderer(styles);
 
   } else if (fObj.category == 'commercial') {
-    let styles = objectAssign({}, defaults);
-    objectAssign(styles, {
+    let styles = Object.assign({}, defaults);
+    Object.assign(styles, {
       fillColor: color.getValue('paleYellow'),
       fillOpacity: 0.2
     })
     return Renderer(styles);
 
   } else if (fObj.category == 'industrial') {
-    let styles = objectAssign({}, defaults);
-    objectAssign(styles, {
+    let styles = Object.assign({}, defaults);
+    Object.assign(styles, {
       fillColor: color.getRamp('lightOrange', 'darkOrange', fObj.position, fObj.within),
     })
     return Renderer(styles);
 
   } else if (fObj.category == 'open') {
-    let styles = objectAssign({}, defaults);
-    objectAssign(styles, {
+    let styles = Object.assign({}, defaults);
+    Object.assign(styles, {
       fillColor: color.getValue('lightGreen'),
       fillOpacity: 0.2
     })

@@ -1,4 +1,4 @@
-var chroma = require( "chroma-js" );
+import chroma from 'chroma-js'
 
 var colorConfig = {
   paleYellow:  chroma([92, 0, 31], 'lab'),

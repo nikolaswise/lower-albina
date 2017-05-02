@@ -4,24 +4,18 @@
   "version": "0.0.0",
   "author": "Nikolas Wise <hello@nikolas.io> (http://nikolas.io/)",
   "devDependencies": {
-    "array.from": "^0.2.0",
-    "babelify": "^6.0.2",
-    "browserify": "^8.1.3",
     "chroma-js": "^0.6.3",
     "diff-dom": "^1.1.0",
-    "fsmonitor": "^0.2.4",
-    "hogan.js": "^3.0.2",
+    "http-server": "^0.10.0",
     "imagemin-newer": "^1.0.1",
-    "live-server": "^0.6.3",
-    "node-sass": "^2.0.0-beta",
-    "object-assign": "~2.0.0",
-    "parallelshell": "^1.0.4",
+    "node-sass": "^4.5.2",
+    "npm-run-all": "^3.1.1",
     "rerun-script": "^0.6.0",
-    "scss-cli": "0.0.5",
-    "scss-utils": "git://github.com/paulcpederson/scss-utils.git",
-    "tiny-emitter": "^1.0.0",
-    "typecabinet": "git://github.com/nikolaswise/typecabinet.git",
-    "viewport-grid": "git://github.com/esripdx/viewport-grid.git"
+    "rollup": "^0.41.6",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "tiny-emitter": "^1.0.0"
   },
   "dependencies": {
     "hapi": "~8.2.0"
@@ -38,13 +32,14 @@
     "img": "src/img/**"
   },
   "scripts": {
-    "start": "node server.js",
-    "js": "browserify -e src/js/index.js -d -t [ babelify --sourceMapRelative .] -o dist/bundle.js",
+    "start": "npm run dev",
+    "dev": "npm-run-all --parallel sass js serve watch",
+    "serve": "http-server ./",
+    "js": "rollup -c",
     "watch": "rerun-script",
-    "dev": "parallelshell 'node server.js' 'rerun-script'",
     "img": "imagemin-newer src/img/ dist",
     "predev": "npm run prepublish",
     "prepublish": "npm run js && npm run sass",
-    "sass": "scss-cli src/sass/*.scss --include-path node_modules/ -o dist/"
+    "sass": "node-sass src/sass/*.scss --include-path node_modules/ -o dist/"
   }
 }

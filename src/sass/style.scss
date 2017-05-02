@@ -1,17 +1,6 @@
 @import 'base/config';
 @import 'base/colors';
-
-@import 'typecabinet/lib/sass/typecabinet';
-@import 'viewport-grid/lib/viewport-grid';
-@import 'scss-utils/scss-utils';
-
-@import 'type/styles';
-
 @import 'components/map';
-@import 'components/frame';
-@import 'components/scale';
-@import 'components/content-panel';
-
 
 .left {
   float: left;

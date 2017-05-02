@@ -1,6 +1,0 @@
-@lightblue: #f1f3f4;
-
-#lower_albina_river{
-  polygon-fill: @lightblue;
-  polygon-opacity: 1;
-}

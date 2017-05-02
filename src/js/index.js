@@ -2,61 +2,61 @@ import events from './lib/pub-sub'
 
 // Build the map
 var map = L.map('map', {
-  scrollWheelZoom: false,
-  doubleClickZoom: false,
+  scrollWheelZoom: true,
   zoomControl: false,
-  dragging: false,
-  center: [45.539, -122.669],
-  zoom: 13
+  zoom: 16
 })
 
 map.whenReady(function() {
+  console.log('map is ready')
   events.emit('map:ready', map)
 })
 
 // Create the Base Layers
 map.createPane('contours')
-import Contours from './layers/contours.js'
+import contours from './layers/contours.js'
+contours.addTo(map)
+
 
 
 map.createPane('taxlots')
-// import Taxlots from './layers/taxlots.js'
-// Taxlots.addTo(map)
+import Taxlots from './layers/taxlots.js'
+Taxlots.addTo(map)
 
 // Create the Study Layers
 map.createPane('zoning')
-// import Zoning from './layers/zoning.js'
-// Zoning.addTo(map)
+import Zoning from './layers/zoning.js'
+Zoning.addTo(map)
 
 map.createPane('footprints')
-// import Footprints from './layers/footprints.js'
-// Footprints.addTo(map)
+import Footprints from './layers/footprints.js'
+Footprints.addTo(map)
 
 
 // Create the Reference Layers
 map.createPane('river')
-// import River from './layers/river.js'
-// River.addTo(map)
+import River from './layers/river.js'
+River.addTo(map)
 
 map.createPane('streets')
-// import Streets from './layers/streets.js'
-// Streets.addTo(map)
+import Streets from './layers/streets.js'
+Streets.addTo(map)
 
 
 // Create Other Goodies
 
 // Like the Scalebar
-import Scalebar from './lib/scale'
-import imperialTemplate from './templates/imperialScale.js'
-import metricTemplate from './templates/metricScale.js'
+// import Scalebar from './lib/scale'
+// import imperialTemplate from './templates/imperialScale.js'
+// import metricTemplate from './templates/metricScale.js'
 
-let scalebar = new Scalebar(map)
-scalebar.custom('scalebar-miles', imperialTemplate)
+// let scalebar = new Scalebar(map)
+// scalebar.custom('scalebar-miles', imperialTemplate)
 
 
-import scrollHandler from './scroll-handler.js'
-window.addEventListener('scroll', scrollHandler, false)
-console.log(scrollHandler)
+// import scrollHandler from './scroll-handler.js'
+// window.addEventListener('scroll', scrollHandler, false)
+// console.log(scrollHandler)
 
 
 export default map
